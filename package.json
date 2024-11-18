@@ -14,7 +14,10 @@
     "@astrojs/mdx": "^3.1.9",
     "@astrojs/rss": "^4.0.9",
     "@astrojs/sitemap": "^3.2.1",
+    "@shikijs/core": "^1.23.1",
+    "@shikijs/engine-javascript": "^1.23.1",
     "astro": "^4.16.13",
+    "oniguruma-to-es": "^0.4.1",
     "typescript": "^5.6.3"
   }
 }
