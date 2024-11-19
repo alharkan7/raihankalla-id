@@ -5,7 +5,6 @@ pubDate: 'Sep 17 2017'
 heroImage: '/blog-placeholder-5.jpg'
 ---
 
-# Stoics – Al Harkan
 There’s a chance you are having problems lately, or at some point in your life, that you think it was the worst part of your life. It can come in many ways; whether it was a broken heart, betrayals, family problems, financial problems, schools, works, friendships, relationships, or any failures that dragged your mental down. I want to let you know that you are not alone. Just like everybody else that was once had to deal with setbacks, it also came to me.
 
 It was last year; and the fact that I just write this today, is because I DO need that much time to recover. I didn’t heal fast when my longtime friend(s) backstabbed me and I lost everything. Not even when I likely had tried everything, visited many places, and met with new people; there was still part of me that still lost in limbo and couldn’t live the same life after. My life had turned upside down, and I was stuck, not knowing what to do.

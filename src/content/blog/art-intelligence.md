@@ -5,7 +5,6 @@ pubDate: 'Jan 02 2017'
 heroImage: '/blog-placeholder-5.jpg'
 ---
 
-# Things I Just Learned About Artificial Intelligence – Al Harkan
 I’m aware of the existence of Artificial Intelligence (AI) for years. In short, it is an advanced technology that designs computer to mimic the way human brain works. It is able to perceive data the same way we see the world –see surroundings, listen to audio, understand language; then analyze and make a quicker decision than we do.
 
 But for the last decades it was only part of our entertainment –being told in so many movies and books. _Transcendence, Iron Man, 2001: A Space Odyssey, Person of Interest, Terminator, The Matrix, I: Robot,_ you name it. All of them were fictions. Even when it was part of the news appeared regularly on my feeds, news that IS real, I wasn’t convinced of the critical change that came along with it.
