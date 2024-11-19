@@ -9,7 +9,7 @@ __That I realized I didn’t just like to write or to read.
 __More than that, I’m fascinated with stories.  
 __Tell me stories, and we are best friends._
 
-So, this is the movie I had been waiting for more than a year, and in my case, I think that’s the first time I was impatiently waiting for months for something to come. [I told you](https://raihankalla.id/dunkerque/raihankalla.id/origin) that I was waiting for three big reveals in 2017, and beside Dan Brown’s Origin and Tesla Model 3, the other one was this Dunkirk (2017) movie, the latest work of Christopher Nolan. You can call me a Chris Nolan fan boy, that’s fine, because what I did at July 21st, 2017 when the movie first came out was what a fan boy would actually do. I literally ran after hitching an _ojek_ to the nearest theater as soon as my work done in the evening, and didn’t catch a breath until I hold one ticket in my hand. \*_Yep, I watched it alone even after I promised bang Satria a month earlier to watch it with him, just because I couldn’t help to wait any longer._ Not to mention how many times I watched the trailer, studying every released material about the movie, looking up the actors’ profile, and counting the days until the premiere.
+So, this is the movie I had been waiting for more than a year, and in my case, I think that’s the first time I was impatiently waiting for months for something to come. [I told you](https://raihankalla.id/origin) that I was waiting for three big reveals in 2017, and beside Dan Brown’s Origin and Tesla Model 3, the other one was this Dunkirk (2017) movie, the latest work of Christopher Nolan. You can call me a Chris Nolan fan boy, that’s fine, because what I did at July 21st, 2017 when the movie first came out was what a fan boy would actually do. I literally ran after hitching an _ojek_ to the nearest theater as soon as my work done in the evening, and didn’t catch a breath until I hold one ticket in my hand. \*_Yep, I watched it alone even after I promised bang Satria a month earlier to watch it with him, just because I couldn’t help to wait any longer._ Not to mention how many times I watched the trailer, studying every released material about the movie, looking up the actors’ profile, and counting the days until the premiere.
 
 I had never been that prepared just to see a film, and so my expectation was high. And that’s reasonable because Nolan’s works always live up to it, and he himself who set the bar of expectation so high by making great movies, one after the other.
 
@@ -17,7 +17,7 @@ Then I came to watch the movie. And this is more of my experience than a review.
 
 \*
 
-![Source: Dunkirk (2017)](https://raihankalla.id/wp-content/uploads/2018/01/Pict-1.jpg)
+![Source: Dunkirk (2017)](/assets/blog/dunkerque-pict-1.webp)
 
 Throughout its 106 minutes length, these are basically my stage of feelings when I watched the movie.
 
@@ -38,7 +38,7 @@ I’ve been collecting all of Christopher Nolan’s movie scripts, all 10 of his
 
 There’s an unwritten law in script writing technique stating that one page of the script equals to one minute of the film. Yes, it doesn’t apply to every case, but that basic rule makes movie scenes detailed enough to follow and enjoy, not too long to make us bored, nor too short to make audience confused. \*_You can learn more about this_ [_here_](https://johnaugust.com/2006/how-accurate-is-the-page-per-minute-rule). So, in Dunkirk’s case it makes me questioned that 82 pages script turned into 106 minutes film, there must be a catch.
 
-![](https://raihankalla.id/wp-content/uploads/2018/01/Pict-2.png)
+![](/assets/blog/dunkerque-pict-2.webp)
 
 And the answer was the director’s choice to make that movie lesser in dialogues, indeed. He chose to create a film to have little dialogues, and instead of trying to engage audience with spoken narratives, it tried to engage audiences with visual spectacles. That, is what made some audience confused throughout the movie. They used to look at screen and follow the actors talk, telling what they came from, how did they end up there, how’s their family, etc. But in Dunkirk, we were brought the actions seconds after the movie started, and that’s relatively what happened until the movie ended. We weren’t given a chance to learn the characters’ family and their motives, and how they ended up in situations like that. All we watched in Dunkirk was what happened in the history of Evacuation of Dunkirk.
 
@@ -64,7 +64,7 @@ I’m not going to be an all-knowing explainer here, but this specific narrative
 
 They who patiently watched the movie to the end would understand that the story was a block set of inter-related narratives. It can be seen as a whole, one unit of an artistic movie, or as three separated arts:
 
-![Source: dunkirkmovie.com](https://raihankalla.id/wp-content/uploads/2018/01/Pict-3.png)
+![Source: dunkirkmovie.com](/assets/blog/dunkerque-pict-3.webp)
 
 The History: “We Shall Never Surrender”
 ---------------------------------------

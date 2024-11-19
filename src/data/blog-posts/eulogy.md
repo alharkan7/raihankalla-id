@@ -22,4 +22,4 @@ If we just know each other, I think it’s easy for you to get me wrong, because
 This is going to be the pre series of #TBID.  
 _Thoughts Before I Die._
 
-I also recorded myself reading this here [https://www.instagram.com/tv/BpGoRZYHpyV/](https://www.instagram.com/tv/BpGoRZYHpyV/)
+I also recorded myself reading this [here](https://www.instagram.com/tv/BpGoRZYHpyV/).
