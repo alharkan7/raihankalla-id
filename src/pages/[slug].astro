@@ -15,9 +15,12 @@ const { Content, frontmatter } = Astro.props.post;
 const { title, description, publishDate } = frontmatter;
 const { slug, readingTime } = getPostData(Astro.props.post);
 const permalink = `${Astro.site.href}${slug}`;
+
+// Check if this is a blog post
+const isBlogPost = Astro.props.post.file.includes('blog-posts');
 ---
 
-<BaseLayout title={title} description={description} permalink={permalink}>
+<BaseLayout title={title} description={description} permalink={permalink} current={isBlogPost ? "blog" : ""}>
   <header>
     <p>{publishDate} ~ {readingTime}</p>
     <h1>{title}</h1>
