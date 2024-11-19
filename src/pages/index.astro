@@ -65,9 +65,8 @@ const permalink = Astro.site.href;
   }
 
   .home-copy {
-    /* flex: 1; */
+    flex: 1;
     padding: 0 1em;
-    width: 50%;
   }
 
   .home-copy h1 {
@@ -117,11 +116,10 @@ const permalink = Astro.site.href;
       flex-direction: column;
     }
 
-    .home-copy (max-width: 768px) {
-      /* flex: 0; */
+    .home-copy {
+      flex: 0;
       padding-bottom: 2em;
       text-align: center;
-      width: 100%;
     }
   }
 </style>
