@@ -1,8 +1,7 @@
 ---
 title: 'Stoics'
 description: 'One of the beauty of this philosophy, is that it doesn’t necessarily negate or against the religion or ideology I’m currently believing in. It even proves that with human efforts to think and contemplating life, it can also find the universal truth that understand life as it is how it is.'
-pubDate: 'Sep 17 2017'
-heroImage: '/blog-placeholder-5.jpg'
+publishDate: '17 Sep 2017'
 ---
 
 There’s a chance you are having problems lately, or at some point in your life, that you think it was the worst part of your life. It can come in many ways; whether it was a broken heart, betrayals, family problems, financial problems, schools, works, friendships, relationships, or any failures that dragged your mental down. I want to let you know that you are not alone. Just like everybody else that was once had to deal with setbacks, it also came to me.

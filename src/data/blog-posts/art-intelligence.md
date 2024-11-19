@@ -1,8 +1,7 @@
 ---
 title: 'Things I Just Learned About Artificial Intelligence'
 description: 'There are two types of AI. The one that has first-programmed purpose, and the one that doesn’t. In simple terms, here is what I understand.'
-pubDate: 'Jan 02 2017'
-heroImage: '/blog-placeholder-5.jpg'
+publishDate: '02 Jan 2017'
 ---
 
 I’m aware of the existence of Artificial Intelligence (AI) for years. In short, it is an advanced technology that designs computer to mimic the way human brain works. It is able to perceive data the same way we see the world –see surroundings, listen to audio, understand language; then analyze and make a quicker decision than we do.
