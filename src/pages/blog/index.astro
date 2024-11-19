@@ -94,6 +94,7 @@ const posts = posts.sort(
 				<ul>
 					{
 						posts.map((post: CollectionEntry<"blog">) => (
+							<Fragment key={post.slug}>
 								<li>
 									<a href={`/${post.slug}/`}>
 										<img
@@ -110,6 +111,7 @@ const posts = posts.sort(
 										</p>
 									</a>
 								</li>
+							</Fragment>
 						))
 					}
 				</ul>
