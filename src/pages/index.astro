@@ -22,7 +22,7 @@ const permalink = Astro.site.href;
       </p>
     </div>
 
-    <div class="hero-image-container">
+    <!-- <div class="hero-image-container">
       <picture>
         <source
           srcset="/assets/home-illustration.webp"
@@ -50,7 +50,7 @@ const permalink = Astro.site.href;
           rel="noopener">Ouch!</a
         >
       </p>
-    </div>
+    </div> -->
   </div>
 </BaseLayout>
 
@@ -65,8 +65,9 @@ const permalink = Astro.site.href;
   }
 
   .home-copy {
-    flex: 1;
+    /* flex: 1; */
     padding: 0 1em;
+    width: 50%;
   }
 
   .home-copy h1 {
@@ -116,10 +117,11 @@ const permalink = Astro.site.href;
       flex-direction: column;
     }
 
-    .home-copy {
-      flex: 0;
+    .home-copy (max-width: 768px) {
+      /* flex: 0; */
       padding-bottom: 2em;
       text-align: center;
+      width: 100%;
     }
   }
 </style>
