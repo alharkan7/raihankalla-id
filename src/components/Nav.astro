@@ -1,7 +1,6 @@
 ---
-import ThemeToggleButton from './ThemeToggleButton.svelte';
-const { current = '' } = Astro.props;
-
+import ThemeToggleButton from "./ThemeToggleButton.svelte";
+const { current = "" } = Astro.props;
 ---
 
 <style>
@@ -31,9 +30,9 @@ const { current = '' } = Astro.props;
   }
 
   a::before {
-    content: '';
+    content: "";
     position: absolute;
-    transition: transform .3s ease;
+    transition: transform 0.3s ease;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -64,12 +63,54 @@ const { current = '' } = Astro.props;
       margin-right: 1em;
     }
   }
+  /* Add this to your component's styles */
+
+  .dropdown-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-button {
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+  }
+
+  .dropdown-container:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-container:hover .dropdown-button {
+  }
 </style>
 
 <nav>
-  <a class={current === "" ? "selected" : ""} href='/'>home</a>
-  <!-- <a class={current === "blog" ? "selected" : ""} href='/blog'>blog</a> -->
-  <a class={current === "about" ? "selected" : ""} href='/about'>about</a>
+  <a class={current === "" ? "selected" : ""} href="/">home</a>
+  <a class={current === "about" ? "selected" : ""} href="/about">about</a>
+  <div class="dropdown-container">
+    <a
+      class={current === "archive" ? "selected" : ""}
+      href="#"
+      class="dropdown-button">Archive</a
+    >
+    <div class="dropdown-content">
+      <a href="/stories">Stories</a>
+      <a href="/threads">Threads</a>
+      <a href="/works">Works</a>
+    </div>
+  </div>
   <div class="theme-toggle-container">
     <ThemeToggleButton client:load />
   </div>
