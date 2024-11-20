@@ -76,25 +76,24 @@ const { current = "" } = Astro.props;
     display: none;
     position: absolute;
     z-index: 1;
-    background-color: var(
-      --background-body,
-      #ffffff
-    ); /* Inherits theme background color with white fallback */
+    background-color: var(--background-body, #ffffff);
+    min-width: unset;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
   }
 
-  /* Add styles for dropdown items */
   .dropdown-content a {
-    color: var(--text-main, #000000); /* Inherits theme text color */
+    color: var(--text-main, #000000);
     padding: 8px 16px;
     text-align: left;
-    min-width: unset; /* Removes the min-width from parent styles */
+    min-width: unset;
   }
 
-  /* Add hover effect for dropdown items */
   .dropdown-content a:hover {
-    background-color: var(--background-body, #f5f5f5); /* Adds hover background */
+    background-color: var(
+      --background-body,
+      #f5f5f5
+    );
   }
 
   .dropdown-container:hover .dropdown-content {
