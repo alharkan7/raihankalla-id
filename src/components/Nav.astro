@@ -63,8 +63,8 @@ const { current = "" } = Astro.props;
       margin-right: 1em;
     }
   }
-  /* Add this to your component's styles */
 
+  
   .dropdown-container {
     position: relative;
     display: inline-block;
@@ -93,6 +93,10 @@ const { current = "" } = Astro.props;
   }
 
   .dropdown-container:hover .dropdown-button {
+  }
+  
+  .dropdown-container.dropdown-active .dropdown-content {
+    display: block;
   }
 </style>
 
