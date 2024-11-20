@@ -64,7 +64,6 @@ const { current = "" } = Astro.props;
     }
   }
 
-  
   .dropdown-container {
     position: relative;
     display: inline-block;
@@ -94,7 +93,6 @@ const { current = "" } = Astro.props;
 
   .dropdown-container:hover .dropdown-button {
   }
-  
   .dropdown-container.dropdown-active .dropdown-content {
     display: block;
   }
@@ -102,7 +100,18 @@ const { current = "" } = Astro.props;
 
 <nav>
   <a class={current === "" ? "selected" : ""} href="/">home</a>
-  <a class={current === "about" ? "selected" : ""} href="/about">about</a>
+
+  <div class="dropdown-container">
+    <a class={current === "about" ? "selected" : ""} 
+    href="/about">about</a>
+    <div class="dropdown-content">
+      <a href="https://x.com/alhrkn" target="_blank" rel="noopener noreferrer">Twitter</a>
+      <a href="https://instagram.com/alhrkn" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://linkedin.com/in/alharkan" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/alharkan7" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="mailto:alharkan7@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>    </div>
+  </div>
+
   <div class="dropdown-container">
     <a
       class={current === "archive" ? "selected" : ""}
@@ -115,7 +124,8 @@ const { current = "" } = Astro.props;
       <a href="/works">Works</a>
     </div>
   </div>
-  <div class="theme-toggle-container">
-    <ThemeToggleButton client:load />
-  </div>
 </nav>
+
+<div class="theme-toggle-container">
+  <ThemeToggleButton client:load />
+</div>
