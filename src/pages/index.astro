@@ -23,6 +23,7 @@ allPosts = allPosts.sort(
   <div class="container">
     <h1>{title}</h1>
     <p><b>{description}</b></p>
+    <hr />
     {
       allPosts.map((post, index) => {
         const href = `/${post.file.split("/blog/").pop().split(".").shift()}`; // Modified this line
