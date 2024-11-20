@@ -4,9 +4,9 @@ import Bio from '../components/Bio.astro';
 import getPostData from '../utils/getPostData';
 
 export async function getStaticPaths() {
-  const posts = await Astro.glob('../data/blog-posts/*.md');
+  const posts = await Astro.glob('../data/blog-posts/blog/*.md');
   return posts.map(p => ({
-    params: { slug: p.file.split('/').pop().split('.').shift() },
+    params: { slug: p.file.split('/blog/').pop().split('.').shift() },
     props: { post: p },
   }));
 }
@@ -17,7 +17,7 @@ const { slug, readingTime } = getPostData(Astro.props.post);
 const permalink = `${Astro.site.href}${slug}`;
 
 // Check if this is a blog post
-const isBlogPost = Astro.props.post.file.includes('blog-posts');
+const isBlogPost = Astro.props.post.file.includes('blog-posts/blog');
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink} current={isBlogPost ? "blog" : ""}>
