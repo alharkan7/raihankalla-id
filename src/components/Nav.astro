@@ -73,20 +73,29 @@ const { current = "" } = Astro.props;
     cursor: pointer;
   }
 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    z-index: 1;
-  }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--theme-bg, #ffffff); /* Inherits theme background color with white fallback */
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  border: 1px solid var(--theme-border, #eaeaea); /* Adds subtle border */
+}
 
-  .dropdown-content a {
-    text-decoration: none;
-    display: block;
-  }
+/* Add styles for dropdown items */
+.dropdown-content a {
+  color: var(--theme-text, #000000); /* Inherits theme text color */
+  padding: 8px 16px;
+  text-align: left;
+  min-width: unset; /* Removes the min-width from parent styles */
+}
 
-  .dropdown-content a:hover {
-  }
-
+/* Add hover effect for dropdown items */
+.dropdown-content a:hover {
+  background-color: var(--theme-hover, #f5f5f5); /* Adds hover background */
+}
   .dropdown-container:hover .dropdown-content {
     display: block;
   }
