@@ -46,7 +46,6 @@ const { current = "" } = Astro.props;
   }
 
   .selected::before {
-    
   }
 
   .theme-toggle-container {
@@ -55,7 +54,7 @@ const { current = "" } = Astro.props;
     padding: 10px 5px;
     display: block;
     position: relative;
-    text-align: center; 
+    text-align: center;
   }
 
   @media screen and (max-width: 520px) {
@@ -73,29 +72,33 @@ const { current = "" } = Astro.props;
     cursor: pointer;
   }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  background-color: var(--theme-bg, #ffffff); /* Inherits theme background color with white fallback */
-  min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  border-radius: 4px;
-  border: 1px solid var(--theme-border, #eaeaea); /* Adds subtle border */
-}
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: var(
+      --background-body,
+      #ffffff
+    ); /* Inherits theme background color with white fallback */
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    border: 1px solid var(--theme-border, #eaeaea); /* Adds subtle border */
+  }
 
-/* Add styles for dropdown items */
-.dropdown-content a {
-  color: var(--theme-text, #000000); /* Inherits theme text color */
-  padding: 8px 16px;
-  text-align: left;
-  min-width: unset; /* Removes the min-width from parent styles */
-}
+  /* Add styles for dropdown items */
+  .dropdown-content a {
+    color: var(--text-main, #000000); /* Inherits theme text color */
+    padding: 8px 16px;
+    text-align: left;
+    min-width: unset; /* Removes the min-width from parent styles */
+  }
 
-/* Add hover effect for dropdown items */
-.dropdown-content a:hover {
-  background-color: var(--theme-hover, #f5f5f5); /* Adds hover background */
-}
+  /* Add hover effect for dropdown items */
+  .dropdown-content a:hover {
+    background-color: var(--background-body, #f5f5f5); /* Adds hover background */
+  }
+
   .dropdown-container:hover .dropdown-content {
     display: block;
   }
@@ -112,14 +115,32 @@ const { current = "" } = Astro.props;
   <a class={current === "" ? "selected" : ""} href="/">home</a>
 
   <div class="dropdown-container">
-    <a class={current === "about" ? "selected" : ""} 
-    href="/about">about</a>
+    <a class={current === "about" ? "selected" : ""} href="/about">about</a>
     <div class="dropdown-content">
-      <a href="https://x.com/alhrkn" target="_blank" rel="noopener noreferrer">Twitter</a>
-      <a href="https://instagram.com/alhrkn" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="https://linkedin.com/in/alharkan" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://github.com/alharkan7" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="mailto:alharkan7@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>    </div>
+      <a href="https://x.com/alhrkn" target="_blank" rel="noopener noreferrer"
+        >Twitter</a
+      >
+      <a
+        href="https://instagram.com/alhrkn"
+        target="_blank"
+        rel="noopener noreferrer">Instagram</a
+      >
+      <a
+        href="https://linkedin.com/in/alharkan"
+        target="_blank"
+        rel="noopener noreferrer">LinkedIn</a
+      >
+      <a
+        href="https://github.com/alharkan7"
+        target="_blank"
+        rel="noopener noreferrer">GitHub</a
+      >
+      <a
+        href="mailto:alharkan7@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer">Email</a
+      >
+    </div>
   </div>
 
   <div class="dropdown-container">
