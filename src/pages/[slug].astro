@@ -3,12 +3,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Bio from '../components/Bio.astro';
 import getPostData from '../utils/getPostData';
 import { findRedirect } from '../utils/redirectHandler';
-import * as redirects from '../data/redirects.json';
 
 export async function getStaticPaths() {
-  const posts = await Astro.glob('../data/blog-posts/blog/*.md');
-  return posts.map(p => ({
-    params: { slug: p.file.split('/blog/').pop().split('.').shift() },
+  const blogPosts = await Astro.glob('../data/blog-posts/blog/*.md');
+  const storyPosts = await Astro.glob('../data/blog-posts/stories/*.md');
+  const threadPosts = await Astro.glob('../data/blog-posts/threads/*.md');
+  const workPosts = await Astro.glob('../data/blog-posts/works/*.md');
+  const uncategorizedPosts = await Astro.glob('../data/blog-posts/uncategorized/*.md');
+  const allPosts = [...blogPosts, ...storyPosts, ...threadPosts, ...workPosts, ...uncategorizedPosts];
+  
+  return allPosts.map(p => ({
+    params: { slug: p.file.split('/').pop().split('.').shift() },
     props: { post: p },
   }));
 }
@@ -16,7 +21,7 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 
 // Check for redirection
-const redirectMatch = Object.values(redirects).find(r => r.short === `/${slug}`);
+const redirectMatch = findRedirect(slug);
 
 // If a redirect is found, use Astro's redirect method
 if (redirectMatch) {
@@ -28,7 +33,7 @@ const { title, description, publishDate } = frontmatter;
 const { slug: postSlug, readingTime } = getPostData(Astro.props.post);
 const permalink = `${Astro.site.href}${postSlug}`;
 
-// Check if this is a blog post
+// Check if this is a blog post or story
 const possiblePaths = ['blog', 'stories', 'threads', 'uncategorized', 'works'];
 const isBlogPost = possiblePaths.some(path => Astro.props.post.file.includes(`blog-posts/${path}`));
 ---
