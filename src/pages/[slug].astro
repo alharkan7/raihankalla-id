@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Bio from '../components/Bio.astro';
 import getPostData from '../utils/getPostData';
 import { findRedirect } from '../utils/redirectHandler';
+import * as redirects from '../data/redirects.json';
 
 export async function getStaticPaths() {
   const posts = await Astro.glob('../data/blog-posts/blog/*.md');
@@ -15,7 +16,7 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 
 // Check for redirection
-const redirectMatch = findRedirect(slug);
+const redirectMatch = Object.values(redirects).find(r => r.short === `/${slug}`);
 
 // If a redirect is found, use Astro's redirect method
 if (redirectMatch) {
