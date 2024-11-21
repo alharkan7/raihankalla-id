@@ -26,7 +26,7 @@ allPosts = allPosts.sort(
     <hr />
     {
       allPosts.map((post, index) => {
-        const href = `/${post.file.split("/blog/").pop().split(".").shift()}`; // Modified this line
+        const href = `/${post.file.split("/blog/").pop().split(".").shift()}`;
         return (
           <div>
             {index !== 0 && <hr />}
