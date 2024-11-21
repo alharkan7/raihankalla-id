@@ -39,7 +39,7 @@ Bukan begitu.
 
 Malahan, energi nasionalisme yang melimpah ruah itu tak benar jika diwujudkan dalam wujud kebencian. Benci adalah energi untuk menjatuhkan pihak lain. **Tapi kita tak lagi sedang berperang**. Itu sebabnya kita tak punya cukup alasan lagi untuk membenci negara lain, lalu mengangkat senjata untuk menghancurkan, seperti pahlawan kemerdekaan. Kita sudah tak lagi berperang, tapi kita sedang beralih ke jenis ‘perang’ yang lain. **Kita sedang berlomba.** Kita Indonesia berjajar dengan negara-negara lain yang sudah merdeka, hidup bukan lagi untuk menjajah kehidupan lain, tapi sedang hidup untuk mewujudkan kehidupan terbaik dari yang lain. Sekali lagi, bukan peperangan, tapi perlombaan. Ini sangat penting, sebab dua pemahaman ini punya dasar niatan dan konsekuensi hasil yang sangat berbeda.[\[1\]](#_ftn1) Coba bandingkan:
 
-[![](https://raihankalla.id/wp-content/uploads/2017/08/Tabel-0-1024x204.png)](https://raihankalla.id/wp-content/uploads/2017/08/Tabel-0.png)
+[![](/assets/blog/Tabel-0.png)](/assets/blog/Tabel-0.png)
 
 Jika pengertian kita tentang cinta tanah air ini salah arti dengan konteks kekinian, sepertinya kita harus merenung lagi apa yang sedang kita perjuangkan.
 
@@ -50,7 +50,7 @@ IndoneSWAG – Indonesia 2045 yang _Swag_
 
 ##### _Sebelumnya, saya ingin menjelaskan dulu kenapa judul tulisan ini adalah IndoneSWAG. Cukup penting diterangkan agar istilah_ swag _yang saya maksud tak salah asosiasi dengan istilah lain yang miring. **Sederhananya ini adalah sekadar permainan kata, untuk membayangkan gagasan tentang Indonesia yang keren di masa depan**. Indonesia yang_ swag_, disingkat IndoneSWAG, sebab istilah_ swag _sudah jadi bahasa informal untuk menyebut perangai seseorang yang percaya diri._
 
-[![](https://raihankalla.id/wp-content/uploads/2017/08/Swag-1-300x185.png)](https://raihankalla.id/wp-content/uploads/2017/08/Swag-1.png)
+[![](/assets/blog/Swag-1.png)](/assets/blog/Swag-1.png)
 
 Tujuan semula tulisan ini adalah dua hal: tentang latar belakang dan tujuan = tentang menengok ke belakang dan memandang ke depan = tentang niatan dan impian = membagi tentang apa yang saya pahami tentang cinta tanah air, serta membagi harapan tentang Indonesia di masa depan, apa yang bisa dilakukan.
 
@@ -64,7 +64,7 @@ Pertanyaan “kenapa” di atas lah yang mendorong saya untuk menyusun tulisan y
 
 Tapi saya kesulitan untuk menemukan data-data perbandingan yang bisa membuat Indonesia disandingkan dengan Singapura atau Korea Selatan, untuk dianalisis perbandingan secara obyektif dan _fair._ Perbedaan konteks perjalanan sejarah masing-masing negara yang jadi alasan. Tapi saya keluar dengan perbandingan lain yang “sama sekali tidak ada hubungannya” tapi bisa jadi penjelas untuk hal lain: _usia perkembangan Indonesia jika dibandingkan/dianalogikan dengan usia manusia rerata._
 
-[![](https://raihankalla.id/wp-content/uploads/2017/08/Tabel-1-1024x636.png)](https://raihankalla.id/wp-content/uploads/2017/08/Tabel-1.png)
+[![](/assets/blog/Tabel-1.png)](/assets/blog/Tabel-1.png)
 
 Saya sadar analogi di atas sama sekali tidak ilmiah. Tetapi bukankah fungsi sebuah analogi adalah untuk membantu kita menyederhanakan dan memahami sesuatu? Dan kesamaan proses perkembangan Indonesia sejak merdeka dengan proses perkembangan manusia sebagai pribadi, terlalu menarik untuk diabaikan.
 
@@ -79,7 +79,7 @@ Sebagai ganti saya yang gagal menemukan materi untuk mengulik masa depan Indones
 
 Total ada 5 _keynote_ dan 4 panel diskusi pada acara tersebut. Berikut saya ilustrasikan peta _talks_ yang ada di rangkaian acara:
 
-[![](https://raihankalla.id/wp-content/uploads/2017/08/1.png)](https://raihankalla.id/wp-content/uploads/2017/08/1.png)
+[![](/assets/blog/1.png)](/assets/blog/1.png)
 
 Saya tak hendak menceritakan apa saja yang dibahas di masing-masing sesi acara tersebut. Tapi jika ada petikan yang paling membekas dari rangkaian acara itu, adalah **kesan penting bahwa saya sedang menyaksikan dan bertemu secara langsung dengan orang-orang yang sedang nyata bekerja**. Mereka sedang bekerja di bidang keahlian yang berbeda-beda, menuju keberhasilan yang berbeda-beda, tapi disatukan di bawah payung identitas negeri yang sama.
 
@@ -95,6 +95,6 @@ Serta untuk kalian yang membaca hingga baris terakhir ini, saya mendoakan agar k
 Pembicara Acara 17an di Menara
 ------------------------------
 
-[![](https://raihankalla.id/wp-content/uploads/2017/08/Tabel-2-1024x863.png)](https://raihankalla.id/wp-content/uploads/2017/08/Tabel-2.png)
+[![](/assets/blog/Tabel-2.png)](/assets/blog/Tabel-2.png)
 
 [\[1\]](#_ftnref1) _I guess some of you will disagree with me. I appreciate that. But one thing that I want to point out is not the labelling of this spirit of nationalism. I just want to spread the love of this country through positive energy, not the opposite of it._

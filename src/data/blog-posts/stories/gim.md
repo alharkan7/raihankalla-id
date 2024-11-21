@@ -27,11 +27,11 @@ Belakangan kedua pertanyaan itu terjawab dari beberapa obrolan. Kenapa _officer_
 
 ##### _Guess who still couldn’t move on from being a social worker? Still in love with education?_
 
-[![](https://raihankalla.id/wp-content/uploads/2017/06/6-300x296.jpg)](https://raihankalla.id/wp-content/uploads/2017/06/6.jpg)
+[![](/assets/blog/6.jpg)](/assets/blog/6.jpg)
 
 Tebak Siapa yang Belum Bisa Move On dari Dunia Sosial
 
-##### Lantas kenapa? Padahal tempat sebelumnya tak ada buruk-buruknya. Pekerjaan pun tak ada susah-susahnya –menantang, iya, susah, tidak. Alasannya karena minat, sebagaimana yang saya jelaskan di [Bagian 1 – Intro](https://raihankalla.id/100haribersama/).
+##### Lantas kenapa? Padahal tempat sebelumnya tak ada buruk-buruknya. Pekerjaan pun tak ada susah-susahnya –menantang, iya, susah, tidak. Alasannya karena minat, sebagaimana yang saya jelaskan di [Bagian 1 – Intro](/100haribersama/).
 
 ##### Bagi sebagian orang mungkin bekerja di perbankan atau tempat kerja yang nyaman jadi impian, tapi untuk sebagian orang yang lain, terutama yang sudah merasakan sehari-harinya di sana, tidak juga. Selama di CIMB saya membantu di tim yang menangani proses produksi dan manajemen materi-materi pemasaran perusahaan untuk seluruh Indonesia. Dari sekadar _editing_ materi iklan yang akan tayang di kantor-kantor cabang di pulau Jawa, sampai menyusun strategi kerjasama dengan kelompok profesional asing untuk diajukan ke manajer. Benar-benar lahan belajar yang menarik.
 
@@ -53,7 +53,7 @@ Filosofi itulah yang mendasari program pengiriman Pengajar Muda menjadi salah sa
 
 Dalam perjalanannya, IM tak hanya berhasil menempatkan 14 angkatan Pengajar Muda di 24 kabupaten, tetapi juga membantu melahirkan beberapa gerakan kependidikan di 140 kota/kabupaten di Indonesia. Sebut saja **Kelas Inspirasi**, tempat para profesional berkesempatan mengajar sekaligus membantu guru dan sekolah untuk mengenalkan beragam jenis profesi kepada para siswa; **Indonesia Menyala**, gerakan peningkatan minat baca yang melibatkan orang tua, guru dan lingkungan; **Festival Gerakan Indonesia Mengajar (FGIM)**, ruang masyarakat umum dapat terlibat secara langsung untuk membantu pendidikan di daerah dengan mengumpulkan buku dan membuat alat peraga pendidikan untuk kemudian dikirimkan ke daerah-daerah; **Ruang Berbagi Ilmu (RuBI)**, aktivitas pelatihan dan penampingan untuk meningkatkan kapasitas penggerak pendidikan di daerah; **Ruang Belajar (RuBel),** wadah dokumentasi metode-metode mengajar kreatif dari penjuru nusantara; serta beberapa inisiatif gerakan pendidikan lain.
 
-[![](https://raihankalla.id/wp-content/uploads/2017/06/3-300x220.png)](https://raihankalla.id/wp-content/uploads/2017/06/3.png)
+[![](/assets/blog/3.png)](/assets/blog/3.png)
 
 Kabar baik yang lain, selain capaian-capaian gerakan pendidikannya, IM ternyata adalah organisasi yang punya prestasi dalam hal akuntabilitas. IM selama 7 tahun berturut-turut berhasil mendapatkan predikat WTP (Wajar Tanpa Pengecualian), sebuah penilaian audit tertinggi, yang dilakukan oleh firma akuntan terkemuka PwC. Saya tahu di luar sana banyak organisasi non-profit yang kurang amanah, yang memanfaatkan dana atau dukungan dari masyarakat untuk kepentingan yang tidak dilaporkan. Tapi selama di IM saya menyaksikan sendiri bagaimana dukungan mitra dikelola dengan baik. Jadi jika kalian menyalurkan iuran publik untuk IM dan Pengajar Muda di daerah, kalian bisa tenang sebab dukungan kalian tiba di tangan yang tepat. Dan semoga hal ini bisa diteladani oleh oleh organisasi-organisasi sosial yang lain.
 
@@ -63,7 +63,7 @@ Tak hanya beruntung datang di hari pertama yang bertepatan dengan rapat strategi
 
 Dalam kurun waktu itu saya jadi tahu siapa saja pihak-pihak yang membuat program-program IM berjalan, yang saya sempat berinteraksi secara langsung maupun tidak langsung.
 
-[![](https://raihankalla.id/wp-content/uploads/2017/06/2-1024x774.jpg)](https://raihankalla.id/wp-content/uploads/2017/06/2.jpg)
+[![](/assets/blog/2.jpg)](/assets/blog/2.jpg)
 
 Apresiasi Tertinggi untuk Para Penggerak dan Pendukung
 ------------------------------------------------------
@@ -77,13 +77,13 @@ Poin saya adalah, jika berikutnya kita melihat di media sosial bahwa IM punya la
 Save the Best for the Last: Beberapa Kata untuk Senbawers
 ---------------------------------------------------------
 
-[![](https://raihankalla.id/wp-content/uploads/2017/06/5-300x100.png)](https://raihankalla.id/wp-content/uploads/2017/06/5.png)_Hai Senbawers!_
+[![](/assets/blog/5.png)](/assets/blog/5.png)_Hai Senbawers!_
 
 _Kalian ingat waktu kalian ngerjain mas Aji dengan bikin mbak Endah pura-pura marah karena alasan pekerjaan mas Aji kurang beres, satu kantor sembunyi di ruang GA, lampu dibuat mati, lalu mas Aji dibawa masuk dan tiba-tiba kue berlilin ulang tahun muncul dari balik pintu??? Lantas mas Aji yang tersentuh, sambil mata berkaca-kaca meniup kue itu sambil semua menyanyikan lagu ulang tahun._
 
 **_Saya mau bilang, andai hati bisa dibaca, sebenarnya waktu itu ada satu orang lagi yang batinnya tersentuh._** Guess who?
 
-[![](https://raihankalla.id/wp-content/uploads/2017/06/6-300x296.jpg)](https://raihankalla.id/wp-content/uploads/2017/06/6.jpg)
+[![](/assets/blog/6.jpg)](/assets/blog/6.jpg)
 
 _Karena tepat pada waktu itu lah saya jadi tahu, seberapa jauh kalian semua menghargai seseorang. Setiap orang. Benar-benar setiap orang. Tanpa melihat jabatan._
 
@@ -93,12 +93,12 @@ _\[Dalam urutan alfabet\] Bang Ucok, Bapak Hikmat, Ibu Evi, Ira –karena menola
 
 _Terima kasih juga untuk kado pulang dari kalian. Entah ini ide siapa sampai ngasih saya kado alat-alat dandan, parfum, bedak, sampai obat kumur. Tapi ngakak sih begitu saya buka di rumah. Pasti ini ide muncul karena kalian pikir saya bakal susah dapat pasangan? Haha,_ say no more, fam \*smiley face\*
 
-[![](https://raihankalla.id/wp-content/uploads/2017/06/DSC_0056-300x169.jpg)](https://raihankalla.id/wp-content/uploads/2017/06/DSC_0056.jpg)
+[![](/assets/blog/DSC_0056.jpg)](/assets/blog/DSC_0056.jpg)
 
 _Juga maafkan bila mungkin ada beberapa tanggung jawab saya yang terlewat, atau interaksi di kantor yang kurang berkenan. Sekalian,_ minal aidin wal faizin.
 
 **_Abis lebaran saya balik._**
 
-Baca [Bagian 1 – Intro](https://raihankalla.id/100haribersama/)
+Baca [Bagian 1 – Intro](/100haribersama/)
 
-Baca [Bagian 2 – Pengajar Muda](https://raihankalla.id/pengajarmuda/)
+Baca [Bagian 2 – Pengajar Muda](/pengajarmuda/)

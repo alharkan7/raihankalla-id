@@ -31,7 +31,7 @@ Setelah menyelesaikan 2016 untuk studi _programming_ dasar, desain, dan startup/
 
 Kita mengerti bahwa setelah kita menyelesaikan pendidikan kita harus bekerja. Tapi saya pikir istilah “bekerja” membatasi pengertian yang seharusnya lebih luas. Kesannya, setelah kita diwajibkan untuk belajar di sekolah selama 12 – 16 tahun, kita harus menghabiskan tahun-tahun berikutnya dengan kewajiban lain, untuk bekerja. Padahal, makna yang seharusnya dibangun adalah bahwa pekerjaan yang kita ambil kelak adalah peran kita di masyarakat, dan bahwa pendidikan yang kita tempuh sebelumnya adalah segala kebutuhan yang diperlukan dalam mempersiapkan kita untuk itu. Bandingkan pemaknaannya seperti ini:
 
-[![](https://raihankalla.id/wp-content/uploads/2017/06/Picture1.jpg)](https://raihankalla.id/wp-content/uploads/2017/06/Picture1.jpg)Tiga dialog di atas adalah percakapan asli, dan pertanyaannya benar-benar pernah saya ajukan ke beberapa orang yang berbeda. Maka saya selalu kagum dengan orang-orang idealis yang dalam setiap jawabannya punya _sense of purpose_. Mereka _selfless._ Tujuan hidup mereka jauh di atas kepentingan pribadi, dan hari-hari mereka bekerja punya makna lebih dari sekadar mengumpulkan materi dan hidup enak, tapi untuk membangun sesuatu yang lebih baik.
+[![](/assets/blog/Picture1.jpg)](/assets/blog/Picture1.jpg)Tiga dialog di atas adalah percakapan asli, dan pertanyaannya benar-benar pernah saya ajukan ke beberapa orang yang berbeda. Maka saya selalu kagum dengan orang-orang idealis yang dalam setiap jawabannya punya _sense of purpose_. Mereka _selfless._ Tujuan hidup mereka jauh di atas kepentingan pribadi, dan hari-hari mereka bekerja punya makna lebih dari sekadar mengumpulkan materi dan hidup enak, tapi untuk membangun sesuatu yang lebih baik.
 
 > “If you make yourself more than just a man, if you devote yourself to an ideal, then you become something else entirely.”
 > 
@@ -49,14 +49,14 @@ Dari poin itu saja kita sudah berbeda dengan generasi orang tua kita. Masih seki
 
 Tapi dua poin itu saja belum cukup. Semata memilih karena materi dan minat diri adalah masih versi mementingkan pribadi. Saya tak menyebut itu keliru, hanya saja, coba bayangkan, apa bedanya kita dengan herbivora yang merumput jika setiap hari tujuan kita hidup adalah cuma untuk bertahan hidup. Setiap agama pun mengajarkan, contohnya Islam, bahwa hidup kita adalah untuk membangun masyarakat dan lingkungan. Kita hidup untuk memberi memberi makna pada hidup, yang mana caranya adalah dengan membuat lingkungan di sekitar kita punya kehidupan, tak hanya kita yang bisa hidup mapan.
 
-[![](https://raihankalla.id/wp-content/uploads/2017/06/1.jpg)](https://raihankalla.id/wp-content/uploads/2017/06/1.jpg)
+[![](/assets/blog/1.jpg)](/assets/blog/1.jpg)
 
 Saya bangga dan kagum kepada teman-teman saya yang sudah lebih dulu lulus dan menemukan tempat mereka, berhasil memenuhi 3 kriteria karir impian. Contohnya ada yang menjadi guru, padahal semasa sekolah ia adalah salah satu yang terbaik di angkatan. Dengan bekal riwayat pendidikannya yang baik, sebenarnya bisa saja teman saya ini melamar ke tempat yang menawarkan gaji sangat tinggi, tapi ia memilih untuk menjadi seorang guru. Karena sekali lagi, materi bukanlah pertimbangan satu-satunya. Ia memilih itu karena di posisi itulah minat pendidikannya bisa disemai, dan di situlah dia paling bisa memberi kontribusi tertinggi, salah satunya dengan mulai membuka perpustakaan gratis.
 
 Agar Tak Terlalu Naif dan Idealis
 ---------------------------------
 
-Hambatan yang muncul biasanya dua: belum menemukan minat yang kuat, dan/atau tak ada tawaran posisi yang ideal menjawab 3 kriteria sebelumnya. Masalah minat menjadi sepenuhnya masing-masing kita yang tahu, dan barangkali tulisan [ini](https://raihankalla.id/100haribersama/raihankalla.id/jobs-stanford) atau [ini](https://raihankalla.id/merasa-salah-jurusan/) dapat memberi pencerahan. Tapi hambatan kedua sedikit berbeda. Jika soal minat solusinya adalah memahami diri, soal kedua solusinya adalah banyak-banyak eksplorasi.
+Hambatan yang muncul biasanya dua: belum menemukan minat yang kuat, dan/atau tak ada tawaran posisi yang ideal menjawab 3 kriteria sebelumnya. Masalah minat menjadi sepenuhnya masing-masing kita yang tahu, dan barangkali tulisan [ini](/100haribersama/raihankalla.id/jobs-stanford) atau [ini](/merasa-salah-jurusan/) dapat memberi pencerahan. Tapi hambatan kedua sedikit berbeda. Jika soal minat solusinya adalah memahami diri, soal kedua solusinya adalah banyak-banyak eksplorasi.
 
 Terlalu naif memang, jika setelah lulus nanti tiba-tiba kita mengharap posisi terbaik. Banyak teman-teman di angkatan atas saya yang selama mahasiswa idealis, rajin mengkritik ketimpangan sosial, tapi pasca lulus, pertimbangan materi adalah yang pertama.
 
@@ -74,6 +74,6 @@ Jadi bisa dibilang, kata kunci cita-cita saya adalah pendidikan dan teknologi. I
 
 > Organisasi itu adalah Indonesia Mengajar.
 
-Baca [Bagian 2 – Pengajar Muda](https://raihankalla.id/pengajarmuda/)
+Baca [Bagian 2 – Pengajar Muda](/pengajarmuda/)
 
-Baca [Bagian 3 – GIM](https://raihankalla.id/gim/)
+Baca [Bagian 3 – GIM](/gim/)
