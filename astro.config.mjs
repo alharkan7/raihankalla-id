@@ -5,7 +5,6 @@ import remarkGfm from 'remark-gfm'
 import remarkSmartypants from 'remark-smartypants'
 import rehypeExternalLinks from 'rehype-external-links'
 import vercel from '@astrojs/vercel/static'
-import react from '@astrojs/react';
 
 export default defineConfig({
   site: 'https://alharkan.vercel.app',
@@ -32,7 +31,6 @@ export default defineConfig({
       //   },
       // }
     ),
-    react(),
     svelte()
   ],
   adapter: vercel(),

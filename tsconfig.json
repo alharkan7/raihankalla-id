@@ -16,8 +16,6 @@
     // Astro will directly run your TypeScript code, no transpilation needed.
     "noEmit": true,
     "allowSyntheticDefaultImports": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "react",
     "verbatimModuleSyntax": true,
     "baseUrl": ".",
     "paths": {
