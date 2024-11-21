@@ -1,4 +1,7 @@
 {
+  "extends": "astro/tsconfigs/strict",
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
     // Enable top-level await, and other modern ESM features.
     "target": "ESNext",
@@ -12,5 +15,14 @@
     // Astro will directly run your TypeScript code, no transpilation needed.
     "noEmit": true,
     "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "verbatimModuleSyntax": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
   }
 }

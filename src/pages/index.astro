@@ -6,11 +6,17 @@ const description =
   "My Written Thoughts on Media, Technology, and Everything in Between";
 const permalink = Astro.site.href;
 
-let allPosts = await Astro.glob("../data/blog-posts/blog/*.md");
-allPosts = allPosts.sort(
+// Add console.log to debug
+const allPosts = await Astro.glob("../data/blog-posts/blog/*.{md,mdx}");
+console.log("Found posts:", allPosts.map(post => ({
+  file: post.file,
+  title: post.frontmatter.title
+})));
+
+const sortedPosts = allPosts.sort(
   (a, b) =>
     new Date(b.frontmatter.publishDate).valueOf() -
-    new Date(a.frontmatter.publishDate).valueOf(),
+    new Date(a.frontmatter.publishDate).valueOf()
 );
 ---
 
@@ -25,7 +31,7 @@ allPosts = allPosts.sort(
     <p><b>{description}</b></p>
     <hr />
     {
-      allPosts.map((post, index) => {
+      sortedPosts.map((post, index) => {
         const href = `/${post.file.split("/blog/").pop().split(".").shift()}`;
         return (
           <div>

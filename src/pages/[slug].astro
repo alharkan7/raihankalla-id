@@ -5,13 +5,19 @@ import getPostData from '../utils/getPostData';
 import { findRedirect } from '../utils/redirectHandler';
 
 export async function getStaticPaths() {
-  const blogPosts = await Astro.glob('../data/blog-posts/blog/*.md');
-  const storyPosts = await Astro.glob('../data/blog-posts/stories/*.md');
-  const threadPosts = await Astro.glob('../data/blog-posts/threads/*.md');
-  const workPosts = await Astro.glob('../data/blog-posts/works/*.md');
-  const uncategorizedPosts = await Astro.glob('../data/blog-posts/uncategorized/*.md');
+  const blogPosts = await Astro.glob('../data/blog-posts/blog/*.{md,mdx}');
+  const storyPosts = await Astro.glob('../data/blog-posts/stories/*.{md,mdx}');
+  const threadPosts = await Astro.glob('../data/blog-posts/threads/*.{md,mdx}');
+  const workPosts = await Astro.glob('../data/blog-posts/works/*.{md,mdx}');
+  const uncategorizedPosts = await Astro.glob('../data/blog-posts/uncategorized/*.{md,mdx}');
   const allPosts = [...blogPosts, ...storyPosts, ...threadPosts, ...workPosts, ...uncategorizedPosts];
   
+  // Add debug logging
+  console.log("Generated paths:", allPosts.map(p => ({
+    slug: p.file.split('/').pop().split('.').shift(),
+    file: p.file
+  })));
+
   return allPosts.map(p => ({
     params: { slug: p.file.split('/').pop().split('.').shift() },
     props: { post: p },
@@ -19,6 +25,7 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
+const { Content, frontmatter } = Astro.props.post;
 
 // Check for redirection
 const redirectMatch = findRedirect(slug);
@@ -28,7 +35,6 @@ if (redirectMatch) {
   return Astro.redirect(redirectMatch.destination);
 }
 
-const { Content, frontmatter } = Astro.props.post;
 const { title, description, publishDate } = frontmatter;
 const { slug: postSlug, readingTime } = getPostData(Astro.props.post);
 const permalink = `${Astro.site.href}${postSlug}`;
