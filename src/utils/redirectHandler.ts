@@ -1,38 +1,33 @@
-import redirectData from '../../public/redirects.json';
+import redirectData from '../../vercel.json';
 
 interface Redirect {
-  title: string;
-  long: string;
-  short: string;
+  source: string;
+  destination: string;
+  permanent: boolean;
 }
 
 export function findRedirect(slug: string | undefined): Redirect | undefined {
   if (!slug) return undefined;
 
   // Debug logging
-  console.log('All Redirects:', redirectData);
+  console.log('All Redirects:', redirectData.redirects);
   console.log('Current Slug:', slug);
 
   // Find redirect matching the slug
-  const redirect = Object.values(redirectData).find(r =>
-    (r as any).short === `/${slug}` || (r as any).short.slice(1) === slug
+  const redirect = redirectData.redirects.find(r => 
+    r.source === `/${slug}` || r.source.slice(1) === slug
   );
 
   // Debug logging for redirect matching
   console.log('Matched Redirect:', redirect);
-  return redirect as Redirect | undefined;
+  return redirect;
 }
 
 export function getAllRedirects(): Record<string, string> {
-  interface RedirectDataRow {
-    short: string;
-    long: string;
-  }
-
   const redirectMap: Record<string, string> = {};
 
-  (Object.values(redirectData) as RedirectDataRow[]).forEach(redirect => {
-    redirectMap[redirect.short] = redirect.long;
+  redirectData.redirects.forEach(redirect => {
+    redirectMap[redirect.source] = redirect.destination;
   });
 
   return redirectMap;
