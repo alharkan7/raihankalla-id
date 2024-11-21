@@ -7,31 +7,27 @@ interface TweetProps {
 
 const Tweet: FC<TweetProps> = ({ id }) => {
   useEffect(() => {
-    // Load Twitter widget script
-    const script = document.createElement('script');
-    script.src = "https://platform.twitter.com/widgets.js";
-    script.type = "text/javascript";
-    script.crossOrigin = "anonymous";
-    script.async = true;
-    
-    // Append script to document body
-    document.body.appendChild(script);
+    const scriptExists = document.querySelector(`script[src="https://platform.twitter.com/widgets.js"]`);
 
-    // Cleanup
-    return () => {
-      try {
-        document.body.removeChild(script);
-      } catch (e) {
-        // Handle case where script was already removed
+    if (!scriptExists) {
+      const script = document.createElement('script');
+      script.src = 'https://platform.twitter.com/widgets.js';
+      script.async = true;
+      document.body.appendChild(script);
+    } else {
+      refreshWidgets();
+    }
+
+    function refreshWidgets() {
+      if (window.twttr) {
+        window.twttr.widgets.load();
       }
-    };
+    }
   }, []);
 
   return (
     <blockquote className="twitter-tweet">
-      <a href={`https://x.com/alhrkn/status/${id}`}>
-        Loading Tweet...
-      </a>
+      <a href={`https://twitter.com/alhrkn/status/${id}`}></a>
     </blockquote>
   );
 };

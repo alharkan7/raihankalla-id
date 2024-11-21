@@ -1,25 +1,36 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Bio from '../components/Bio.astro';
-import getPostData from '../utils/getPostData';
-import { findRedirect } from '../utils/redirectHandler';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Bio from "../components/Bio.astro";
+import getPostData from "../utils/getPostData";
+import { findRedirect } from "../utils/redirectHandler";
 
 export async function getStaticPaths() {
-  const blogPosts = await Astro.glob('../data/blog-posts/blog/*.{md,mdx}');
-  const storyPosts = await Astro.glob('../data/blog-posts/stories/*.{md,mdx}');
-  const threadPosts = await Astro.glob('../data/blog-posts/threads/*.{md,mdx}');
-  const workPosts = await Astro.glob('../data/blog-posts/works/*.{md,mdx}');
-  const uncategorizedPosts = await Astro.glob('../data/blog-posts/uncategorized/*.{md,mdx}');
-  const allPosts = [...blogPosts, ...storyPosts, ...threadPosts, ...workPosts, ...uncategorizedPosts];
-  
-  // Add debug logging
-  console.log("Generated paths:", allPosts.map(p => ({
-    slug: p.file.split('/').pop().split('.').shift(),
-    file: p.file
-  })));
+  const blogPosts = await Astro.glob("../data/blog-posts/blog/*.{md,mdx}");
+  const storyPosts = await Astro.glob("../data/blog-posts/stories/*.{md,mdx}");
+  const threadPosts = await Astro.glob("../data/blog-posts/threads/*.{md,mdx}");
+  const workPosts = await Astro.glob("../data/blog-posts/works/*.{md,mdx}");
+  const uncategorizedPosts = await Astro.glob(
+    "../data/blog-posts/uncategorized/*.{md,mdx}",
+  );
+  const allPosts = [
+    ...blogPosts,
+    ...storyPosts,
+    ...threadPosts,
+    ...workPosts,
+    ...uncategorizedPosts,
+  ];
 
-  return allPosts.map(p => ({
-    params: { slug: p.file.split('/').pop().split('.').shift() },
+  // Add debug logging
+  // console.log(
+  //   "Generated paths:",
+  //   allPosts.map((p) => ({
+  //     slug: p.file.split("/").pop().split(".").shift(),
+  //     file: p.file,
+  //   })),
+  // );
+
+  return allPosts.map((p) => ({
+    params: { slug: p.file.split("/").pop().split(".").shift() },
     props: { post: p },
   }));
 }
@@ -40,11 +51,18 @@ const { slug: postSlug, readingTime } = getPostData(Astro.props.post);
 const permalink = `${Astro.site.href}${postSlug}`;
 
 // Check if this is a blog post or other category
-const possiblePaths = ['blog', 'stories', 'threads', 'uncategorized', 'works'];
-const isBlogPost = possiblePaths.some(path => Astro.props.post.file.includes(`blog-posts/${path}`));
+const possiblePaths = ["blog", "stories", "threads", "uncategorized", "works"];
+const isBlogPost = possiblePaths.some((path) =>
+  Astro.props.post.file.includes(`blog-posts/${path}`),
+);
 ---
 
-<BaseLayout title={title} description={description} permalink={permalink} current={isBlogPost ? "blog" : ""}>
+<BaseLayout
+  title={title}
+  description={description}
+  permalink={permalink}
+  current={isBlogPost ? "blog" : ""}
+>
   <header>
     <p>{publishDate} ~ {readingTime}</p>
     <h1>{title}</h1>

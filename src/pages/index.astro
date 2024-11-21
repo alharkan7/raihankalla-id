@@ -8,10 +8,10 @@ const permalink = Astro.site.href;
 
 // Add console.log to debug
 const allPosts = await Astro.glob("../data/blog-posts/blog/*.{md,mdx}");
-console.log("Found posts:", allPosts.map(post => ({
-  file: post.file,
-  title: post.frontmatter.title
-})));
+// console.log("Found posts:", allPosts.map(post => ({
+//   file: post.file,
+//   title: post.frontmatter.title
+// })));
 
 const sortedPosts = allPosts.sort(
   (a, b) =>

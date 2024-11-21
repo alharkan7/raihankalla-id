@@ -9,21 +9,29 @@ import react from '@astrojs/react';
 
 export default defineConfig({
   site: 'https://alharkan.vercel.app',
+  security: {
+    directives: {
+      'script-src': ["'self'", "'unsafe-inline'", 'platform.twitter.com'],
+      'frame-src': ["'self'", 'platform.twitter.com'],
+    },
+  },
   integrations: [
-    mdx({
-      remarkPlugins: [remarkGfm, remarkSmartypants],
-      rehypePlugins: [
-        [
-          rehypeExternalLinks,
-          {
-            target: '_blank',
-          },
-        ],
-      ],
-      shikiConfig: {
-        theme: 'nord',
-      },
-    }),
+    mdx(
+      //   {
+      //   remarkPlugins: [remarkGfm, remarkSmartypants],
+      //   rehypePlugins: [
+      //     [
+      //       rehypeExternalLinks,
+      //       {
+      //         target: '_blank',
+      //       },
+      //     ],
+      //   ],
+      //   shikiConfig: {
+      //     theme: 'nord',
+      //   },
+      // }
+    ),
     react(),
     svelte()
   ],
