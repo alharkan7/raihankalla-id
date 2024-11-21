@@ -5,11 +5,11 @@ import getPostData from "../utils/getPostData";
 import { findRedirect } from "../utils/redirectHandler";
 
 export async function getStaticPaths() {
-  const blogPosts = await Astro.glob("../data/blog-posts/blog/*.{md,mdx}");
-  const storyPosts = await Astro.glob("../data/blog-posts/stories/*.{md,mdx}");
-  const threadPosts = await Astro.glob("../data/blog-posts/threads/*.{md,mdx}");
-  const workPosts = await Astro.glob("../data/blog-posts/works/*.{md,mdx}");
-  const uncategorizedPosts = await Astro.glob("../data/blog-posts/uncategorized/*.{md,mdx}");
+  const blogPosts:any = await Astro.glob("../data/blog-posts/blog/*.{md,mdx}");
+  const storyPosts:any = await Astro.glob("../data/blog-posts/stories/*.{md,mdx}");
+  const threadPosts:any = await Astro.glob("../data/blog-posts/threads/*.{md,mdx}");
+  const workPosts:any = await Astro.glob("../data/blog-posts/works/*.{md,mdx}");
+  const uncategorizedPosts:any = await Astro.glob("../data/blog-posts/uncategorized/*.{md,mdx}");
   const allPosts = [
     ...blogPosts,
     ...storyPosts,
@@ -46,7 +46,7 @@ if (redirectMatch) {
 
 const { title, description, publishDate } = frontmatter;
 const { slug: postSlug, readingTime } = getPostData(Astro.props.post);
-const permalink = `${Astro.site.href}${postSlug}`;
+const permalink = `${Astro?.site?.href}${postSlug}`;
 
 // Check if this is a blog post or other category
 const possiblePaths = ["blog", "stories", "threads", "uncategorized", "works"];
