@@ -56,7 +56,7 @@ Saya bangga dan kagum kepada teman-teman saya yang sudah lebih dulu lulus dan me
 Agar Tak Terlalu Naif dan Idealis
 ---------------------------------
 
-Hambatan yang muncul biasanya dua: belum menemukan minat yang kuat, dan/atau tak ada tawaran posisi yang ideal menjawab 3 kriteria sebelumnya. Masalah minat menjadi sepenuhnya masing-masing kita yang tahu, dan barangkali tulisan [ini](/100haribersama/raihankalla.id/jobs-stanford) atau [ini](/merasa-salah-jurusan/) dapat memberi pencerahan. Tapi hambatan kedua sedikit berbeda. Jika soal minat solusinya adalah memahami diri, soal kedua solusinya adalah banyak-banyak eksplorasi.
+Hambatan yang muncul biasanya dua: belum menemukan minat yang kuat, dan/atau tak ada tawaran posisi yang ideal menjawab 3 kriteria sebelumnya. Masalah minat menjadi sepenuhnya masing-masing kita yang tahu, dan barangkali tulisan [ini](/jobs-stanford) atau [ini](/merasa-salah-jurusan/) dapat memberi pencerahan. Tapi hambatan kedua sedikit berbeda. Jika soal minat solusinya adalah memahami diri, soal kedua solusinya adalah banyak-banyak eksplorasi.
 
 Terlalu naif memang, jika setelah lulus nanti tiba-tiba kita mengharap posisi terbaik. Banyak teman-teman di angkatan atas saya yang selama mahasiswa idealis, rajin mengkritik ketimpangan sosial, tapi pasca lulus, pertimbangan materi adalah yang pertama.
 
