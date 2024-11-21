@@ -9,9 +9,7 @@ export async function getStaticPaths() {
   const storyPosts = await Astro.glob("../data/blog-posts/stories/*.{md,mdx}");
   const threadPosts = await Astro.glob("../data/blog-posts/threads/*.{md,mdx}");
   const workPosts = await Astro.glob("../data/blog-posts/works/*.{md,mdx}");
-  const uncategorizedPosts = await Astro.glob(
-    "../data/blog-posts/uncategorized/*.{md,mdx}",
-  );
+  const uncategorizedPosts = await Astro.glob("../data/blog-posts/uncategorized/*.{md,mdx}");
   const allPosts = [
     ...blogPosts,
     ...storyPosts,
