@@ -22,7 +22,7 @@ const { current = "" } = Astro.props;
     position: relative;
     min-width: 90px;
     text-align: center;
-    margin:5px
+    margin: 5px;
   }
 
   a:not(.selected) {
@@ -91,10 +91,7 @@ const { current = "" } = Astro.props;
   }
 
   .dropdown-content a:hover {
-    background-color: var(
-      --background-body,
-      #f5f5f5
-    );
+    background-color: var(--background-body, #f5f5f5);
   }
 
   .dropdown-container:hover .dropdown-content {
@@ -107,14 +104,34 @@ const { current = "" } = Astro.props;
   .dropdown-container.dropdown-active .dropdown-content {
     display: block;
   }
+
+  .dropdown-content.show {
+    display: block;
+  }
+
+  /* On desktop, still use hover */
+  @media (hover: hover) {
+    .dropdown-container:hover .dropdown-content {
+      display: block;
+    }
+  }
 </style>
 
 <nav>
   <a class={current === "" ? "selected" : ""} href="/">home</a>
 
   <div class="dropdown-container">
-    <a class={current === "about" ? "selected" : ""} href="/about">about</a>
+    <a
+      class={current === "social" ? "selected" : ""}
+      href="#"
+      data-dropdown-toggle>Social</a
+    >
     <div class="dropdown-content">
+      <a
+      class={current === "about" ? "selected" : ""}
+      href="/about"
+        >Bio</a
+      >
       <a href="https://x.com/alhrkn" target="_blank" rel="noopener noreferrer"
         >Twitter</a
       >
@@ -145,6 +162,7 @@ const { current = "" } = Astro.props;
     <a
       class={current === "archive" ? "selected" : ""}
       href="#"
+      data-dropdown-toggle
       class="dropdown-button">Archive</a
     >
     <div class="dropdown-content">
@@ -156,6 +174,46 @@ const { current = "" } = Astro.props;
     </div>
   </div>
 </nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const dropdownToggles = document.querySelectorAll("[data-dropdown-toggle]");
+    let activeDropdown: Element | null = null;
+
+    dropdownToggles.forEach((toggle) => {
+      toggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        const container = (e.currentTarget as Element).closest(
+          ".dropdown-container",
+        );
+        if (!container) return;
+
+        const dropdownContent = container.querySelector(".dropdown-content");
+        if (!dropdownContent) return;
+
+        // Close previously opened dropdown if clicking a different one
+        if (activeDropdown && activeDropdown !== dropdownContent) {
+          activeDropdown.classList.remove("show");
+        }
+
+        // Toggle current dropdown
+        dropdownContent.classList.toggle("show");
+        activeDropdown = dropdownContent;
+      });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+      const target = e.target as Element;
+      if (!target.closest(".dropdown-container")) {
+        if (activeDropdown) {
+          activeDropdown.classList.remove("show");
+          activeDropdown = null;
+        }
+      }
+    });
+  });
+</script>
 
 <div class="theme-toggle-container">
   <ThemeToggleButton client:load />
