@@ -123,12 +123,11 @@ const { current = "" } = Astro.props;
   <div class="dropdown-container">
     <a
       class={current === "social" ? "selected" : ""}
-      href="#"
       data-dropdown-toggle>Social</a
     >
     <div class="dropdown-content">
       <a
-      class={current === "about" ? "selected" : ""}
+      class={current === "social" ? "selected" : ""}
       href="/about"
         >Bio</a
       >
@@ -161,7 +160,6 @@ const { current = "" } = Astro.props;
   <div class="dropdown-container">
     <a
       class={current === "archive" ? "selected" : ""}
-      href="#"
       data-dropdown-toggle
       class="dropdown-button">Archive</a
     >
