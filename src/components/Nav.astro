@@ -119,44 +119,7 @@ const { current = "" } = Astro.props;
 
 <nav>
   <a class={current === "" ? "selected" : ""} href="/">home</a>
-
-  <div class="dropdown-container">
-    <a
-      class={current === "social" ? "selected" : ""}
-      data-dropdown-toggle>Social</a
-    >
-    <div class="dropdown-content">
-      <a
-      class={current === "social" ? "selected" : ""}
-      href="/about"
-        >Bio</a
-      >
-      <a href="https://x.com/alhrkn" target="_blank" rel="noopener noreferrer"
-        >Twitter</a
-      >
-      <a
-        href="https://instagram.com/alhrkn"
-        target="_blank"
-        rel="noopener noreferrer">Instagram</a
-      >
-      <a
-        href="https://linkedin.com/in/alharkan"
-        target="_blank"
-        rel="noopener noreferrer">LinkedIn</a
-      >
-      <a
-        href="https://github.com/alharkan7"
-        target="_blank"
-        rel="noopener noreferrer">GitHub</a
-      >
-      <a
-        href="mailto:alharkan7@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer">Email</a
-      >
-    </div>
-  </div>
-
+  
   <div class="dropdown-container">
     <a
       class={current === "archive" ? "selected" : ""}
@@ -168,9 +131,43 @@ const { current = "" } = Astro.props;
       <a href="/shorts">Shorts</a>
       <a href="/stories">Stories</a>
       <a href="/works">Works</a>
-      <a href="https://www.youtube.com/@alhrkn/playlist">YouTube</a>
     </div>
   </div>
+
+  <div class="dropdown-container">
+    <a class={current === "social" ? "selected" : ""} data-dropdown-toggle
+      >Links</a
+    >
+    <div class="dropdown-content">
+      <a href="https://x.com/alhrkn" target="_blank" rel="noopener noreferrer"
+        >Twitter</a
+      >
+      <a
+        href="https://instagram.com/alhrkn"
+        target="_blank"
+        rel="noopener noreferrer">Instagram</a
+      >
+      <a
+        href="https://www.youtube.com/@alhrkn/playlist"
+        target="_blank"
+        rel="noopener noreferrer">YouTube</a
+      >
+      <a
+        href="https://linkedin.com/in/alharkan"
+        target="_blank"
+        rel="noopener noreferrer">LinkedIn</a
+      >
+      <a
+        href="https://github.com/alharkan7"
+        target="_blank"
+        rel="noopener noreferrer">GitHub</a
+      >
+    </div>
+  </div>
+
+  <a class={current === "" ? "selected" : ""} href="/about">about</a>
+
+
 </nav>
 
 <script>
