@@ -79,5 +79,3 @@ _Stewart dan timnya mengeluarkan beberapa edisi dari_ Katalog Seluruh Dunia, _da
 _Terima kasih banyak, semuanya._
 
 Sumber: [news.stanford.edu](http://news.stanford.edu/)
-
-Gambar: [entrepreneur.com](http://entrepreneur.com/)

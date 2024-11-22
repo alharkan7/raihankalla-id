@@ -4,12 +4,9 @@ description: 'Temanku bilang, langit itu hidup. Satu-satunya alasan kenapa ia be
 publishDate: '24 Jan 2015'
 ---
 
-_Temanku bilang, langit itu hidup._
-
-_Satu-satunya alasan kenapa ia berkata begitu,_
-
-_adalah karena ia tidak melihat satu pun tanda,_
-
+_Temanku bilang, langit itu hidup._<br>
+_Satu-satunya alasan kenapa ia berkata begitu,_<br>
+_adalah karena ia tidak melihat satu pun tanda,_<br>
 _bahwa langit itu sesuatu yang mati._
 
 Beberapa tahun lalu, ketika aku masih sering bolos mengaji dan kabur dari rumah menjelang sore hari, aku dan beberapa temanku melewatkan detik pertama matahari mengangguk ke barat sampai ia berubah warna menjadi oranye dan tersungkur tidur digantikan jaga oleh bintang atau bulan, di pematang sawah. Sampai aku berpindah ke bangku SMP pun, tidak pernah tuntas aku menyusuri pematang sawah itu, sebab luas sekali! _Mungkin itu juga kenapa cerita sore di sana tak pernah sama, seperti drama, banyak irama, memiliki rima, mencuri perhatian seksama, dan bagiku tak akan percuma._
@@ -213,4 +210,4 @@ Lalu hal kedua yang membingungkanku juga adalah, jika benar dia mengirimkan pake
 18 Sentimeter
 -------------
 
-> _Sentimeter pertama. Gambar pertama_
+> _Sentimeter pertama. [Gambar Pertama.](/18-sentimeter-2-tamat)_

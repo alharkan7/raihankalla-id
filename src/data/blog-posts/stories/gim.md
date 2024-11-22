@@ -77,7 +77,9 @@ Poin saya adalah, jika berikutnya kita melihat di media sosial bahwa IM punya la
 Save the Best for the Last: Beberapa Kata untuk Senbawers
 ---------------------------------------------------------
 
-[![](/assets/blog/5.png)](/assets/blog/5.png)_Hai Senbawers!_
+[![](/assets/blog/5.png)](/assets/blog/5.png)
+
+_Hai Senbawers!_
 
 _Kalian ingat waktu kalian ngerjain mas Aji dengan bikin mbak Endah pura-pura marah karena alasan pekerjaan mas Aji kurang beres, satu kantor sembunyi di ruang GA, lampu dibuat mati, lalu mas Aji dibawa masuk dan tiba-tiba kue berlilin ulang tahun muncul dari balik pintu??? Lantas mas Aji yang tersentuh, sambil mata berkaca-kaca meniup kue itu sambil semua menyanyikan lagu ulang tahun._
 
