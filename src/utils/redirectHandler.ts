@@ -6,6 +6,10 @@ interface Redirect {
   permanent: boolean;
 }
 
+// Function to normalize paths
+function normalizePath(path: string): string {
+  return path.startsWith('/') ? path : `/${path}`;
+}
 export function findRedirect(slug: string | undefined): Redirect | undefined {
   if (!slug) return undefined;
 
@@ -13,14 +17,19 @@ export function findRedirect(slug: string | undefined): Redirect | undefined {
   // console.log('All Redirects:', redirectData.redirects);
   // console.log('Current Slug:', slug);
 
-  // Find redirect matching the slug
-  const redirect = redirectData.redirects.find(r => 
-    r.source === `/${slug}` || r.source.slice(1) === slug
+  const normalizedSlug = normalizePath(slug);
+
+  // Check Vercel redirects
+  const vercelRedirect = redirectData.redirects.find(r => 
+    normalizePath(r.source) === normalizedSlug
   );
 
-  // Debug logging for redirect matching
-  // console.log('Matched Redirect:', redirect);
-  return redirect;
+  if (vercelRedirect) {
+    return vercelRedirect;
+  }
+
+  // For Netlify, we don't need to check here since redirects are handled by Netlify's _redirects file
+  return undefined;
 }
 
 export function getAllRedirects(): Record<string, string> {

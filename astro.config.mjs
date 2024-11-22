@@ -35,6 +35,7 @@ export default defineConfig({
     ),
   ],
   // adapter: vercel(),
+  adapter: netlify(),
   markdown: {
     shikiConfig: {
       theme: 'nord',
