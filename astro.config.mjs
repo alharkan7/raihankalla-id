@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm'
 import remarkSmartypants from 'remark-smartypants'
 import rehypeExternalLinks from 'rehype-external-links'
 import vercel from '@astrojs/vercel/static'
+import netlify from '@astrojs/netlify/static'
 
 export default defineConfig({
   site: 'https://alharkan.vercel.app',
@@ -15,6 +16,7 @@ export default defineConfig({
     },
   },
   integrations: [
+    svelte(),
     mdx(
       //   {
       //   remarkPlugins: [remarkGfm, remarkSmartypants],
@@ -31,9 +33,8 @@ export default defineConfig({
       //   },
       // }
     ),
-    svelte()
   ],
-  adapter: vercel(),
+  // adapter: vercel(),
   markdown: {
     shikiConfig: {
       theme: 'nord',
