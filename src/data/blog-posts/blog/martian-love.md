@@ -13,7 +13,3 @@ And funny thing is, I relate more to the Venusians’ IDs rather than Martians�
 > If I could freely summarize this book, it would be something like: “how to stop a fight with your partner: (1) remember they are alien, (2) breathe, (3) follow their way before you ask anything back”. And if you’re not alone now, co-living with your Martian or Venusian, just remember that you are an earthling from another planet, who fell in love with another alien.
 
 And in my case, I’m just a Martian with love. Not funny.
-
-* * *
-
-_Cover photo by me_

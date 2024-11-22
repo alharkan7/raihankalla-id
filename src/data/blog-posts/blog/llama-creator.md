@@ -12,6 +12,6 @@ Using Meta’s [Llama](https://www.llama.com/) LLM, I built a simple web app tha
 
 If you want to learn more about this project, I’ve laid it all out on this page:
 
-[llama-creator.unicornplatform.page](https://llama-creator.unicornplatform.page/)
+## [llama-creator.unicornplatform.page](https://llama-creator.unicornplatform.page/) ##
 
 It is a super simple app by real developers’ standards, but it’s a small testament to the idea that today the barrier of coding is non-existent.

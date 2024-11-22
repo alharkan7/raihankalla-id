@@ -8,7 +8,7 @@ There’s a chance you are having problems lately, or at some point in your life
 
 It was last year; and the fact that I just write this today, is because I DO need that much time to recover. I didn’t heal fast when my longtime friend(s) backstabbed me and I lost everything. Not even when I likely had tried everything, visited many places, and met with new people; there was still part of me that still lost in limbo and couldn’t live the same life after. My life had turned upside down, and I was stuck, not knowing what to do.
 
-Until I found a cure, lessons, that came from an unlikely source –a philosophy of more than 2 millennia old, practiced by them who’s called Stoics. The same philosophy that accompanied Nelson Mandela in his 27 years imprisonment, guiding and comforting him until his eventual victory of fights against racial inequality in South Africa[\[1\]](#_ftn1).
+Until I found a cure, lessons, that came from an unlikely source –a philosophy of more than 2 millennia old, practiced by them who’s called Stoics. The same philosophy that accompanied Nelson Mandela in his 27 years imprisonment, guiding and comforting him until his eventual victory of fights against racial inequality in South Africa [^1].
 
 > This writing is about that lessons.
 
@@ -139,4 +139,4 @@ Sources:
 *   _Modern Stoicism_ (Wikipedia English)
 *   _Neostoicism_ (Wikipedia English)
 
-[\[1\]](#_ftnref1) And not just Mandela, its values were also shared by kings, presidents, artists, writers, and entrepreneurs that show it as a way of life; on the list are figures like George Washington, Thomas Jefferson, Adam Smith, and John Stuart Mill.
+[^1]: And not just Mandela, its values were also shared by kings, presidents, artists, writers, and entrepreneurs that show it as a way of life; on the list are figures like George Washington, Thomas Jefferson, Adam Smith, and John Stuart Mill.

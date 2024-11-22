@@ -4,10 +4,12 @@ description: 'So, this is the movie I had been waiting for more than a year, and
 publishDate: '14 Jan 2018'
 ---
 
-_It was that moment, when I watched “Interstellar” for the 20th times,  
-__That I realized I didn’t just like to write or to read.  
-__More than that, I’m fascinated with stories.  
-__Tell me stories, and we are best friends._
+_It was that moment, when I watched “Interstellar” for the 20th times,_<br>
+_That I realized I didn’t just like to write or to read._<br>
+_More than that, I’m fascinated with stories._<br>
+_Tell me stories, and we are best friends._
+
+***
 
 So, this is the movie I had been waiting for more than a year, and in my case, I think that’s the first time I was impatiently waiting for months for something to come. [I told you](/origin) that I was waiting for three big reveals in 2017, and beside Dan Brown’s Origin and Tesla Model 3, the other one was this Dunkirk (2017) movie, the latest work of Christopher Nolan. You can call me a Chris Nolan fan boy, that’s fine, because what I did at July 21st, 2017 when the movie first came out was what a fan boy would actually do. I literally ran after hitching an _ojek_ to the nearest theater as soon as my work done in the evening, and didn’t catch a breath until I hold one ticket in my hand. \*_Yep, I watched it alone even after I promised bang Satria a month earlier to watch it with him, just because I couldn’t help to wait any longer._ Not to mention how many times I watched the trailer, studying every released material about the movie, looking up the actors’ profile, and counting the days until the premiere.
 

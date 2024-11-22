@@ -53,5 +53,3 @@ But it is theorized that we will not be able to control such a powerful AI. Some
 > To conclude, it is safe to say that we already took action based on that understanding of danger. There is an Ethical Board at Google DeepMind project, as well as many other research facilities, to guide the AI progress to fit our ethics. We also have Elon Musk who actively founded OpenAI, an AI research facility with not-for-profit goal to counter any bad effects caused by major corporations in the future. Our path to an advanced AI is inevitable, but preparation for the threats also has to be made obligatory.
 
 I personally look forward to this progress with _aware curiosity._
-
-\*Illustration: Hal 9000 from _2001: A Space Odyssey (1968)_
