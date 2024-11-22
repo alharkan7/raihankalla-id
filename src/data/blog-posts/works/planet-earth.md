@@ -49,5 +49,3 @@ Finally, we do not need to put together a beautiful tale about the beautiful, gr
 \_\_\_
 
 _This script was delivered as a speech for my participation at April English Month when I was a 2nd year college student._
-
-\*_credit image: alphacoders.com_

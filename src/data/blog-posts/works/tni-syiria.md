@@ -51,5 +51,3 @@ I am proud to be a part of the Indonesian nation, which has TNI and brave soldie
 \_\_\_
 
 _This script was delivered at as a speech Naval Academy Speech Contest 2013._
-
-\*_credit image: lowyat.net_

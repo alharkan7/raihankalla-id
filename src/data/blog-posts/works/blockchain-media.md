@@ -15,5 +15,3 @@ Teknologi ini sudah ada di depan mata. Penerapan dan pembuktian keamanannya pun 
 Tapi Indonesia punya harapan. Sejak masa Orde Baru, Indonesia punya beberapa media yang lekat citra dan semangatnya dengan jurnalisme yang mengedepankan akurasi dan kebenaran informasi. Kini di tengah maraknya penyebaran berita palsu akibat mudahnya para pengguna internet untuk mengarang dan menyebarkan informasi, media-media tersebut perlu untuk maju kembali sebagai media yang memimpin tren media terpercaya. Langkah tersebut bisa diawali dengan membangun sebuah media berita online pertama yang mengadopsi teknologi blockchain. Dengan memanfaatkan teknologi tersebut dalam publikasi berita-berita, media di Indonesia akan menjadi pionir tak hanya dalam perihal inovasi teknologi, tetapi juga pionir dalam hal budaya kebenaran informasi di dunia digital. Ini akan mengubah wajah media di Indonesia, selamanya.
 
 Pertanyaannya: Apakah imajinasi di atas  _feasible_ untuk dilaksanakan?
-
-\-Ilustrasi: _trustnodes.com_

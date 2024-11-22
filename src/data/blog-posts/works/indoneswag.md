@@ -37,9 +37,9 @@ Bukan begitu.
 
 > **Kita sama sekali tak cukup alasan untuk membenci negeri lain, hanya karena kita cinta pada negeri ini.**
 
-Malahan, energi nasionalisme yang melimpah ruah itu tak benar jika diwujudkan dalam wujud kebencian. Benci adalah energi untuk menjatuhkan pihak lain. **Tapi kita tak lagi sedang berperang**. Itu sebabnya kita tak punya cukup alasan lagi untuk membenci negara lain, lalu mengangkat senjata untuk menghancurkan, seperti pahlawan kemerdekaan. Kita sudah tak lagi berperang, tapi kita sedang beralih ke jenis ‘perang’ yang lain. **Kita sedang berlomba.** Kita Indonesia berjajar dengan negara-negara lain yang sudah merdeka, hidup bukan lagi untuk menjajah kehidupan lain, tapi sedang hidup untuk mewujudkan kehidupan terbaik dari yang lain. Sekali lagi, bukan peperangan, tapi perlombaan. Ini sangat penting, sebab dua pemahaman ini punya dasar niatan dan konsekuensi hasil yang sangat berbeda.[\[1\]](#_ftn1) Coba bandingkan:
+Malahan, energi nasionalisme yang melimpah ruah itu tak benar jika diwujudkan dalam wujud kebencian. Benci adalah energi untuk menjatuhkan pihak lain. **Tapi kita tak lagi sedang berperang**. Itu sebabnya kita tak punya cukup alasan lagi untuk membenci negara lain, lalu mengangkat senjata untuk menghancurkan, seperti pahlawan kemerdekaan. Kita sudah tak lagi berperang, tapi kita sedang beralih ke jenis ‘perang’ yang lain. **Kita sedang berlomba.** Kita Indonesia berjajar dengan negara-negara lain yang sudah merdeka, hidup bukan lagi untuk menjajah kehidupan lain, tapi sedang hidup untuk mewujudkan kehidupan terbaik dari yang lain. Sekali lagi, bukan peperangan, tapi perlombaan. Ini sangat penting, sebab dua pemahaman ini punya dasar niatan dan konsekuensi hasil yang sangat berbeda[^1]. Coba bandingkan:
 
-[![](/assets/blog/Tabel-0.png)](/assets/blog/Tabel-0.png)
+[![](/assets/blog/Tabel-0.jpg)](/assets/blog/Tabel-0.jpg)
 
 Jika pengertian kita tentang cinta tanah air ini salah arti dengan konteks kekinian, sepertinya kita harus merenung lagi apa yang sedang kita perjuangkan.
 
@@ -64,7 +64,7 @@ Pertanyaan “kenapa” di atas lah yang mendorong saya untuk menyusun tulisan y
 
 Tapi saya kesulitan untuk menemukan data-data perbandingan yang bisa membuat Indonesia disandingkan dengan Singapura atau Korea Selatan, untuk dianalisis perbandingan secara obyektif dan _fair._ Perbedaan konteks perjalanan sejarah masing-masing negara yang jadi alasan. Tapi saya keluar dengan perbandingan lain yang “sama sekali tidak ada hubungannya” tapi bisa jadi penjelas untuk hal lain: _usia perkembangan Indonesia jika dibandingkan/dianalogikan dengan usia manusia rerata._
 
-[![](/assets/blog/Tabel-1.png)](/assets/blog/Tabel-1.png)
+[![](/assets/blog/Tabel-1.jpg)](/assets/blog/Tabel-1.jpg)
 
 Saya sadar analogi di atas sama sekali tidak ilmiah. Tetapi bukankah fungsi sebuah analogi adalah untuk membantu kita menyederhanakan dan memahami sesuatu? Dan kesamaan proses perkembangan Indonesia sejak merdeka dengan proses perkembangan manusia sebagai pribadi, terlalu menarik untuk diabaikan.
 
@@ -95,6 +95,6 @@ Serta untuk kalian yang membaca hingga baris terakhir ini, saya mendoakan agar k
 Pembicara Acara 17an di Menara
 ------------------------------
 
-[![](/assets/blog/Tabel-2.png)](/assets/blog/Tabel-2.png)
+[![](/assets/blog/Tabel-2.jpg)](/assets/blog/Tabel-2.jpg)
 
-[\[1\]](#_ftnref1) _I guess some of you will disagree with me. I appreciate that. But one thing that I want to point out is not the labelling of this spirit of nationalism. I just want to spread the love of this country through positive energy, not the opposite of it._
+[^1]: _I guess some of you will disagree with me. I appreciate that. But one thing that I want to point out is not the labelling of this spirit of nationalism. I just want to spread the love of this country through positive energy, not the opposite of it._

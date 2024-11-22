@@ -24,9 +24,9 @@ Apabila ketiga elemen pendidikan tersebut bekerja dengan baik, Pemerintah mampu 
 
 > Indonesia pasti BISA.
 
+***
+
 Malang, 28 Agustus 2016  
 Ali Al Harkan
 
 Tulisan ini disusun sebagai materi peserta Duta Indonesia BISA 2016.
-
-_credit image: azharnasih.blogspot.com_
