@@ -4,12 +4,9 @@ description: 'Kau mungkin tak akan percaya apa yang bisa kulihat dari atas sini 
 publishDate: '24 Nov 2015'
 ---
 
-> _Gunung Arjuno. 12-14 Januari 2015._
-> 
-> _3339 meter di atas permukaan air laut._
-> 
-> _Dari sudut lembah hingga di atas awan._
-> 
+> _Gunung Arjuno. 12-14 Januari 2015._<br>
+> _3339 meter di atas permukaan air laut._<br>
+> _Dari sudut lembah hingga di atas awan._<br>
 > _Dikelilingi pemandangan indah luar biasa._
 
 Kau mungkin tak akan percaya apa yang bisa kulihat dari atas sini ketika menulis surat ini sekarang, sebab surat ini kusempatkan kutulis di banyak ragam waktu dan pemandangan luar biasa. Di pagi hari di sela sarapan, ketika udara begitu basah dan napas seperti mendesah, kabut putih pekat berangsur memudar dan menampakkan segala bentuk  kehidupan yang ada di bawah ketinggian ini; membuat jarak pandang begitu jauh seakan-akan aku bisa melihat segalanya dari sini –dari pedesaan dengan rumah-rumah mungil tepat di lembah gunung, rapatnya perkotaan di kejauhan, arus padat lalu lintas kendaraan yang terlihat begitu kecil hingga seperti bongkahan sel-sel darah yang mengalir di guratan nadi, hingga ujung cakrawala berupa biru laut bertemu biru langit bertemu.
@@ -26,9 +23,9 @@ _tapi dari atas sini terlihat jelas bahwa mereka telah membuat bintang-bintang m
 
 > _Jika kau telah lelah menunggu langit untuk memudar bersih dan menanti sinar bintang untuk dibagi,_
 > 
-> Mendakilah_,_
+> Mendakilah,
 
-Naiklah ke atas_, dengan semangat seolah kau ingin memprotes langit mengapa tak kunjung ada sinar bintang yang mereka bagi,_
+Naiklah ke atas_, dengan semangat seolah kau ingin memprotes langit mengapa tak kunjung ada sinar bintang yang mereka bagi,
 
 _Kemudian jika kau telah berjalan cukup jauh dan tinggi hingga tak ada lagi tanah yang bisa kau tapak, mungkin kau telah berada di salah satu puncak bukit atau gunung. Tunggu hingga malam hari dan tengoklah ke bawah, maka kau akan melihat bahwa bintang tak hanya menggantung bertaburan di langit, tapi ia juga bertebaran di tanah rendah, diciptakan olehmu sendiri bersama jutaan manusia lain._
 

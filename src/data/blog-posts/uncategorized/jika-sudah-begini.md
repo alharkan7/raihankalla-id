@@ -4,12 +4,9 @@ description: 'Sejak sekolahku pindah di luar kota, aku menghabiskan hampir selal
 publishDate: '11 Feb 2013'
 ---
 
-> _Jika kau tak percaya bahwa kereta api itu bernafas,_
-> 
-> _setidaknya aku percaya bahwa dalam tiap saat aku dikandungnya,_
-> 
-> _aku merasa hidup di dalamnya._
-> 
+> _Jika kau tak percaya bahwa kereta api itu bernafas,_<br>
+> _setidaknya aku percaya bahwa dalam tiap saat aku dikandungnya,_<br>
+> _aku merasa hidup di dalamnya._<br>
 > _Aku juga merasakan kehidupan, di sana…_
 
 Sejak sekolahku pindah di luar kota, aku menghabiskan hampir selalu berkereta dua kali dalam seminggu. Singkat cerita –aneh sekali aku sedang tak ingin berbelit-belit, aku punya banyak cerita darinya. Atau jika boleh kusebut, aku belajar banyak dari kereta api. Tapi kadang, jika mengingat-ingat puluhan perjalananku selama ini dalam perutnya, aku mendapati diriku sendiri menjadi orang aneh karenanya. Banyak sekali! Mungkin sebuah bisa kubagi.
@@ -27,5 +24,3 @@ _\*_
 Tapi kemarin, seseorang mengingatkanku, bahwa waktu aku masih sering berlari-lari Jumat sore itu, di sela aku mengatur nafasku yang hampir habis hanya menyisakan hembusan dan tarikan pendek-pendek, setelah menyapa orang itu untuk memberitahukan aku sudah tiba meskipun ia tak peduli, dalam hati aku sering bergumam sendiri,
 
 > _“Jika sudah seperti ini, aku rela kereta kita terlambat 1 hari.”_
-
-\*_credit image: pierre.bodilis.fr_

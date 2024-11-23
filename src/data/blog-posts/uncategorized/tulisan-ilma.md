@@ -59,5 +59,3 @@ Sebenarnya aku bisa menjawab pertanyaan Ilmi itu, tapi karena ia sudah terlanjur
 Ilmi sedang jatuh c\*nta. Anak tomboy seperti dia ternyata bisa juga suka sama anak laki-laki, yang biasanya kalau tidak jadi musuh dalam permainan, pastijadi musuh asli. Tapi sayang, ia masih belajar, ia masih belum mengerti. Anak tomboy seperti dia, yang seumur hidupnya tak pernah merasakan jatuh c\*nta, tiba-tiba dihadapkan gejala-gejala aneh yang tak dimengerti. _Orang yang tak pernah jatuh c\*nta, akan sulit menyadari bahwa ia sedang jatuh c\*nta. Mungkin untuk yang pertama kali. Meskipun tanda-tandanya sudah sangat jelas ada di depan matanya._
 
 > Ilmi, semoga kamu cepat mengerti.
-
-\*_credit image: ideoftheday.com_

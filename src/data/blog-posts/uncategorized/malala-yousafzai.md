@@ -66,5 +66,3 @@ Tak Pernah Meragukan Karyamu akan Membawa Dampak kepada Dunia
 Semua manusia dari 7 miliar populasi dunia memiliki impian yang unik untuk diwujudkan, dari bakat yang kita miliki, untuk ditawarkan dan memberi manfaat kepada dunia. Apa yang membedakan mana di antara kita yang berhasil mewujudkan impian itu, dengan orang lain yang ‘seperti’ tak kelihatan sama sekali wujud dari impiannya? Yang pertama adalah keyakinan.
 
 > Jika kita sendiri tak yakin pada impian kita, bagaimana kita bisa melangkah untuk mengawali dan mewujudkan impian itu? Yakin adalah kunci pertama untuk mewujudkan impian.
-
-\*_credit image: bbc.com_

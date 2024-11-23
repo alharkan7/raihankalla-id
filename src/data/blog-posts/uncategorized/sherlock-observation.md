@@ -61,5 +61,3 @@ Sumber: _Mastermind – How to Think Like Sherlock Homes_
 \_\_\_
 
 _Tulisan ini kali pertama diterbitkan pada laman WeSolved.org_
-
-\*_credit image: thedailybeast.com_

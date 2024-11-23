@@ -85,5 +85,3 @@ Di luar semua pesan-pesan pengingat di atas, bagian terpenting dari tulisan ini 
 \_\_\_
 
 _Tulisan ini kali pertama diterbitkan pada laman WeSolved.org_
-
-\*_credit image: freecollegenow.org_

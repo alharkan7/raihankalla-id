@@ -99,5 +99,3 @@ Setibanya di halaman, kami berdelapan benar-benar bermain pesawat kertas! Adu la
 > Tertawa aneh.
 
 _Karena aku tahu sendiri, tertawa bukan karena lucunya adu pesawat kertas waktu itu, tapi menertawakan diri sendiri yang dengan bahagianya meninggalkan ulangan Matematika untuk bermain pesawat kertas dan pantat ditendang dengan sepatu berujung besi._
-
-_\*credit image: skypeoplemalta.com_
