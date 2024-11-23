@@ -122,11 +122,11 @@ const { current = "" } = Astro.props;
 </style>
 
 <nav>
-  <a class={current === "/" ? "selected" : ""} href="/">home</a>
+  <a class={current === "" ? "selected" : ""} href="/">home</a>
 
   <div class="dropdown-container">
     <a
-      class={current === "Archive" ? "selected" : ""}
+      class={current === "threads" || current === "shorts" || current === "stories" || current === "works" || current === "uncategorized" ? "selected" : ""}
       data-dropdown-toggle
       role="button"
       tabindex="0"
@@ -149,7 +149,6 @@ const { current = "" } = Astro.props;
       class="dropdown-button">Links</a
     >
     <div class="dropdown-content">
-      <a href="/about">About</a>
       <a href="https://x.com/alhrkn" target="_blank" rel="noopener noreferrer"
         >Twitter</a
       >
@@ -163,8 +162,16 @@ const { current = "" } = Astro.props;
         target="_blank"
         rel="noopener noreferrer">LinkedIn</a
       >
+      <a
+        href="https://github.com/alharkan7"
+        target="_blank"
+        rel="noopener noreferrer">GitHub</a
+      >
     </div>
   </div>
+
+  <a class={current === "about" ? "selected" : ""} href="/about">bio</a>
+
 </nav>
 
 <script>
