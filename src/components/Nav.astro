@@ -115,6 +115,10 @@ const { current = "" } = Astro.props;
       display: block;
     }
   }
+
+  [data-dropdown-toggle] {
+    cursor: pointer;
+  }
 </style>
 
 <nav>
@@ -122,8 +126,10 @@ const { current = "" } = Astro.props;
 
   <div class="dropdown-container">
     <a
-      class={current === "archive" ? "selected" : ""}
+      class={current === "Archive" ? "selected" : ""}
       data-dropdown-toggle
+      role="button"
+      tabindex="0"
       class="dropdown-button">Archive</a
     >
     <div class="dropdown-content">
@@ -136,16 +142,16 @@ const { current = "" } = Astro.props;
 
   <div class="dropdown-container">
     <a
-      class={current === "social" ? "selected" : ""}
+      class={current === "Links" ? "selected" : ""}
       data-dropdown-toggle
+      role="button"
+      tabindex="0"
       class="dropdown-button">Links</a
     >
     <div class="dropdown-content">
       <a href="/about">About</a>
-      <a 
-        href="https://x.com/alhrkn" 
-        target="_blank" 
-        rel="noopener noreferrer">Twitter</a
+      <a href="https://x.com/alhrkn" target="_blank" rel="noopener noreferrer"
+        >Twitter</a
       >
       <a
         href="https://instagram.com/alhrkn"
@@ -162,6 +168,16 @@ const { current = "" } = Astro.props;
 </nav>
 
 <script>
+  const dropdownToggle = document.querySelector("[data-dropdown-toggle]");
+  if (dropdownToggle) {
+    dropdownToggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = e.currentTarget as HTMLElement;
+      const dropdownContent = target.nextElementSibling as HTMLElement | null;
+      dropdownContent?.classList.toggle("show");
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     const dropdownToggles = document.querySelectorAll("[data-dropdown-toggle]");
     let activeDropdown: Element | null = null;
