@@ -139,6 +139,9 @@ const { current = "" } = Astro.props;
       >Links</a
     >
     <div class="dropdown-content">
+<a href="/about"
+        >About</a
+      >
       <a href="https://x.com/alhrkn" target="_blank" rel="noopener noreferrer"
         >Twitter</a
       >
@@ -164,10 +167,6 @@ const { current = "" } = Astro.props;
       >
     </div>
   </div>
-
-  <a class={current === "" ? "selected" : ""} href="/about">about</a>
-
-
 </nav>
 
 <script>
