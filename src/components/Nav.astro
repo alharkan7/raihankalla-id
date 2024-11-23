@@ -4,6 +4,13 @@ const { current = "" } = Astro.props;
 ---
 
 <style>
+  .nav-container {
+    margin: 0 auto;
+    max-width: 42em;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
   nav {
     align-items: center;
     display: flex;
@@ -58,7 +65,12 @@ const { current = "" } = Astro.props;
     text-align: center;
   }
 
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 480px) {
+    .nav-container {
+      max-width: 100%;
+      padding: 0;
+    }
+
     .theme-toggle-container {
       margin-right: 1em;
     }
@@ -121,58 +133,65 @@ const { current = "" } = Astro.props;
   }
 </style>
 
-<nav>
-  <a class={current === "" ? "selected" : ""} href="/">home</a>
+<div class="nav-container">
+  <nav>
+    <a class={current === "" ? "selected" : ""} href="/">home</a>
 
-  <div class="dropdown-container">
-    <a
-      class={current === "threads" || current === "shorts" || current === "stories" || current === "works" || current === "uncategorized" ? "selected" : ""}
-      data-dropdown-toggle
-      role="button"
-      tabindex="0"
-      class="dropdown-button">Archive</a
-    >
-    <div class="dropdown-content">
-      <a href="/threads">Threads</a>
-      <a href="/shorts">Shorts</a>
-      <a href="/stories">Stories</a>
-      <a href="/works">Works</a>
+    <div class="dropdown-container">
+      <a
+        class={current === "threads" ||
+        current === "shorts" ||
+        current === "stories" ||
+        current === "works" ||
+        current === "uncategorized"
+          ? "selected"
+          : ""}
+        data-dropdown-toggle
+        role="button"
+        tabindex="0"
+        class="dropdown-button">Archive</a
+      >
+      <div class="dropdown-content">
+        <a href="/threads">Threads</a>
+        <a href="/shorts">Shorts</a>
+        <a href="/stories">Stories</a>
+        <a href="/works">Works</a>
+      </div>
     </div>
-  </div>
 
-  <div class="dropdown-container">
-    <a
-      class={current === "Links" ? "selected" : ""}
-      data-dropdown-toggle
-      role="button"
-      tabindex="0"
-      class="dropdown-button">Links</a
-    >
-    <div class="dropdown-content">
-      <a href="https://x.com/alhrkn" target="_blank" rel="noopener noreferrer"
-        >Twitter</a
-      >
+    <div class="dropdown-container">
       <a
-        href="https://instagram.com/alhrkn"
-        target="_blank"
-        rel="noopener noreferrer">Instagram</a
+        class={current === "Links" ? "selected" : ""}
+        data-dropdown-toggle
+        role="button"
+        tabindex="0"
+        class="dropdown-button">Links</a
       >
-      <a
-        href="https://linkedin.com/in/alharkan"
-        target="_blank"
-        rel="noopener noreferrer">LinkedIn</a
-      >
-      <a
-        href="https://github.com/alharkan7"
-        target="_blank"
-        rel="noopener noreferrer">GitHub</a
-      >
+      <div class="dropdown-content">
+        <a href="https://x.com/alhrkn" target="_blank" rel="noopener noreferrer"
+          >Twitter</a
+        >
+        <a
+          href="https://instagram.com/alhrkn"
+          target="_blank"
+          rel="noopener noreferrer">Instagram</a
+        >
+        <a
+          href="https://linkedin.com/in/alharkan"
+          target="_blank"
+          rel="noopener noreferrer">LinkedIn</a
+        >
+        <a
+          href="https://github.com/alharkan7"
+          target="_blank"
+          rel="noopener noreferrer">GitHub</a
+        >
+      </div>
     </div>
-  </div>
 
-  <a class={current === "about" ? "selected" : ""} href="/about">bio</a>
-
-</nav>
+    <a class={current === "about" ? "selected" : ""} href="/about">bio</a>
+  </nav>
+</div>
 
 <script>
   const dropdownToggle = document.querySelector("[data-dropdown-toggle]");
