@@ -19,6 +19,7 @@ const { current = "" } = Astro.props;
     font-family: var(--font-family-sans);
     font-weight: 700;
     text-transform: uppercase;
+    gap: 1rem;
   }
 
   .theme-toggle-container {
@@ -193,7 +194,6 @@ const { current = "" } = Astro.props;
   <div class="theme-toggle-container">
     <ThemeToggleButton client:load />
   </div>
-
 </div>
 
 <script>
@@ -245,5 +245,3 @@ const { current = "" } = Astro.props;
     });
   });
 </script>
-
-
