@@ -2,13 +2,11 @@
   const rootEl = typeof document !== 'undefined' ? document.documentElement : null;
   let theme = '';
 
-  if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-    theme = localStorage.getItem('theme');
-  } else if (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    theme = 'dark';
-  } else {
-    theme = 'light';
-  }
+if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+  theme = localStorage.getItem('theme');
+} else {
+  theme = 'light'; // Default to light theme
+}
 
   function toggleTheme() {
     theme = theme === 'light' ? 'dark' : 'light';
