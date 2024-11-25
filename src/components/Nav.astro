@@ -5,6 +5,7 @@ const { current = "" } = Astro.props;
 
 <style>
   .nav-container {
+    position: relative;
     margin: 0 auto;
     max-width: 42em;
     width: 100%;
@@ -88,8 +89,8 @@ const { current = "" } = Astro.props;
       position: sticky; /* Keep theme toggle visible */
       right: 0;
       padding-left: 0;
-margin-left: auto;
-justify-content: flex-end;
+      margin-left: auto;
+      justify-content: flex-end;
       background: var(--background-body);
     }
   }
@@ -99,14 +100,18 @@ justify-content: flex-end;
     display: inline-block;
   }
 
+  .dropdown-container:has(.dropdown-content.show) {
+    position: static;
+  }
+
   .dropdown-button {
     cursor: pointer;
   }
 
   .dropdown-content {
     display: none;
-    position: absolute;
-    z-index: 1;
+    position: fixed;
+    z-index: 999;
     background-color: var(--background-body, #ffffff);
     min-width: unset;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -157,8 +162,12 @@ justify-content: flex-end;
 
 <div class="nav-container">
   <nav>
-    <a class={current === "" || current === "about" ? "selected" : ""} href="/">home</a>
-    <a class={current === "threads" ? "selected" : ""} href="/threads">threads</a>
+    <a class={current === "" || current === "about" ? "selected" : ""} href="/"
+      >home</a
+    >
+    <a class={current === "threads" ? "selected" : ""} href="/threads"
+      >threads</a
+    >
 
     <div class="dropdown-container">
       <a
@@ -232,6 +241,29 @@ justify-content: flex-end;
       dropdownContent?.classList.toggle("show");
     });
   }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const dropdownContainers = document.querySelectorAll('.dropdown-container');
+    
+    dropdownContainers.forEach(container => {
+      const button = container.querySelector('[data-dropdown-toggle]');
+      const content = container.querySelector('.dropdown-content');
+      
+      if (button && content) {
+        button.addEventListener('click', () => {
+          // Type assertions to HTMLElement
+          const buttonEl = button as HTMLElement;
+          const contentEl = content as HTMLElement;
+          
+          // Position the dropdown under the button
+          const buttonRect = buttonEl.getBoundingClientRect();
+          contentEl.style.top = `${buttonRect.bottom}px`;
+          contentEl.style.left = `${buttonRect.left}px`;
+          contentEl.style.transform = 'none';
+        });
+      }
+    });
+  });
 
   document.addEventListener("DOMContentLoaded", () => {
     const dropdownToggles = document.querySelectorAll("[data-dropdown-toggle]");
