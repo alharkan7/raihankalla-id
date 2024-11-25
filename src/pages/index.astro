@@ -18,14 +18,17 @@ const sortedPosts = allPosts.sort(
     new Date(b.frontmatter.publishDate).valueOf() -
     new Date(a.frontmatter.publishDate).valueOf()
 );
+
+let isAboutPage = permalink === "/about"; // Example condition
+let current = isAboutPage ? "about" : "";
 ---
 
 <BaseLayout
   title={title}
   description={description}
   permalink={permalink ?? "/"}
-  current=""
->
+  current={current}
+/>
   <div class="container">
     <h1>{title}</h1>
     <p><b>{description}</b></p>
