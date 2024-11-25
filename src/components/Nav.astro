@@ -11,6 +11,15 @@ const { current = "" } = Astro.props;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-x: auto; /* Add horizontal scroll */
+    -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar IE/Edge */
+  }
+
+  /* Hide scrollbar for Chrome/Safari/Opera */
+  .nav-container::-webkit-scrollbar {
+    display: none;
   }
 
   nav {
@@ -20,6 +29,9 @@ const { current = "" } = Astro.props;
     font-weight: 700;
     text-transform: uppercase;
     gap: 0.5rem;
+    padding: 0 1rem; /* Add horizontal padding */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    min-width: min-content; /* Ensure nav takes minimum required width */
   }
 
   .theme-toggle-container {
@@ -69,9 +81,14 @@ const { current = "" } = Astro.props;
     .nav-container {
       max-width: 100%;
       padding: 0;
+      justify-content: flex-start; /* Align content to start on mobile */
     }
 
     .theme-toggle-container {
+      position: sticky; /* Keep theme toggle visible */
+      right: 1rem;
+      padding-left: 1rem;
+      background: var(--background-body);
     }
   }
 
