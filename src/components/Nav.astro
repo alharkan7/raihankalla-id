@@ -29,7 +29,7 @@ const { current = "" } = Astro.props;
     font-weight: 700;
     text-transform: uppercase;
     gap: 0.5rem;
-    padding: 0 1rem; /* Add horizontal padding */
+    padding: 0; /* Add horizontal padding */
     flex-wrap: nowrap; /* Prevent wrapping */
     min-width: min-content; /* Ensure nav takes minimum required width */
   }
@@ -87,7 +87,7 @@ const { current = "" } = Astro.props;
     .theme-toggle-container {
       position: sticky; /* Keep theme toggle visible */
       right: 1rem;
-      padding-left: 1rem;
+      padding-left: 0;
       background: var(--background-body);
     }
   }
