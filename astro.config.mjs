@@ -4,11 +4,10 @@ import mdx from '@astrojs/mdx'
 import remarkGfm from 'remark-gfm'
 import remarkSmartypants from 'remark-smartypants'
 import rehypeExternalLinks from 'rehype-external-links'
-import vercel from '@astrojs/vercel/static'
 import netlify from '@astrojs/netlify/static'
 
 export default defineConfig({
-  site: 'https://alharkan.vercel.app',
+  site: 'https://raihankalla.id',
   security: {
     directives: {
       'script-src': ["'self'", "'unsafe-inline'", 'platform.twitter.com'],
