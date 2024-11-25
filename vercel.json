@@ -2,53 +2,13 @@
     "redirects": [
         {
             "permanent": true,
-            "destination": "https://twitter.com/alhrkn/status/1308629643264626688",
-            "source": "/trivia"
+            "destination": "https://twitter.com/alhrkn/status/1526933166597935105",
+            "source": "/menara-gading"
         },
         {
             "permanent": true,
-            "destination": "https://twitter.com/alhrkn/status/1418209085791510535",
-            "source": "/gratitude"
-        },
-        {
-            "permanent": true,
-            "destination": "https://twitter.com/alhrkn/status/1327205937271115777",
-            "source": "/ideas"
-        },
-        {
-            "permanent": true,
-            "destination": "https://twitter.com/alhrkn/status/1430491571519057927",
-            "source": "/legendary-math"
-        },
-        {
-            "permanent": true,
-            "destination": "https://twitter.com/alhrkn/status/1346458893640036352",
-            "source": "/wiseman"
-        },
-        {
-            "permanent": true,
-            "destination": "https://twitter.com/alhrkn/status/1450779651580698629",
-            "source": "/learning-cone"
-        },
-        {
-            "permanent": true,
-            "destination": "https://twitter.com/alhrkn/status/1439211932746010626",
-            "source": "/comedian-dancer"
-        },
-        {
-            "permanent": true,
-            "destination": "https://twitter.com/alhrkn/status/1435078828259373063",
-            "source": "/apple-presence"
-        },
-        {
-            "permanent": true,
-            "destination": "https://twitter.com/alhrkn/status/1450745365016109057",
-            "source": "/friends-fate"
-        },
-        {
-            "permanent": true,
-            "destination": "https://twitter.com/alhrkn/status/1356493528356900864",
-            "source": "/future"
+            "destination": "https://twitter.com/alhrkn/status/1494865215191588868",
+            "source": "/pandemic-face"
         },
         {
             "permanent": true,
@@ -57,13 +17,39 @@
         },
         {
             "permanent": true,
-            "destination": "https://twitter.com/alhrkn/status/1449857113673506818",
-            "source": "/business-lessons"
+            "destination": "https://twitter.com/alhrkn/status/1450779651580698629",
+            "source": "/learning-cone"
         },
         {
             "permanent": true,
-            "destination": "https://twitter.com/alhrkn/status/1320046501985280000",
-            "source": "/100day-code"
+            "destination": "https://twitter.com/alhrkn/status/1435078828259373063",
+            "source": "/apple-presence"
+        },
+        {
+            "permanent": true,
+            "destination": "https://twitter.com/alhrkn/status/1418209085791510535",
+            "source": "/gratitude"
+        },
+        {
+            "permanent": true,
+            "destination": "https://twitter.com/alhrkn/status/1356493528356900864",
+            "source": "/future"
+        },
+        {
+            "permanent": true,
+            "destination": "https://twitter.com/alhrkn/status/1327205937271115777",
+            "source": "/ideas"
+        },
+        
+        {
+            "permanent": true,
+            "destination": "https://twitter.com/alhrkn/status/1308629643264626688",
+            "source": "/trivia"
+        },
+        {
+            "permanent": true,
+            "destination": "https://twitter.com/alhrkn/status/1430491571519057927",
+            "source": "/legendary-math"
         }
     ]
 }
