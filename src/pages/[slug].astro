@@ -68,7 +68,12 @@ const category = isBlogPost
 >
   <header>
     <!-- <p>{publishDate} ~ {readingTime}</p> -->
-    <p><a href={category === "blog" ? "/" : `/${category}`}>#{category}</a> ~ {publishDate}</p>
+    <p>
+  <a href={category === "blog" ? "/" : `/${category}`}>
+    {category === "blog" ? "feature" : `#${category}`}
+  </a>
+  ~ {publishDate}
+</p>
     <h1>{title}</h1>
     <hr />
   </header>
