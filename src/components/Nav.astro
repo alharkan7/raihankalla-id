@@ -130,6 +130,10 @@ const { current = "" } = Astro.props;
   [data-dropdown-toggle] {
     cursor: pointer;
   }
+
+  .enaiblr-link {
+    color: #2563eb !important; /* blue-600 hex color */
+  }
 </style>
 
 <div class="nav-container">
@@ -158,6 +162,8 @@ const { current = "" } = Astro.props;
       </div>
     </div>
 
+    <a class={current === "about" ? "selected" : ""} href="/about">bio</a>
+
     <div class="dropdown-container">
       <a
         class={current === "Links" ? "selected" : ""}
@@ -176,6 +182,12 @@ const { current = "" } = Astro.props;
           rel="noopener noreferrer">Instagram</a
         >
         <a
+          href="https://enaiblr.org"
+          target="_blank"
+          class="enaiblr-link"
+          rel="noopener noreferrer">Enaiblr</a
+        >
+        <a
           href="https://linkedin.com/in/alharkan"
           target="_blank"
           rel="noopener noreferrer">LinkedIn</a
@@ -187,8 +199,6 @@ const { current = "" } = Astro.props;
         >
       </div>
     </div>
-
-    <a class={current === "about" ? "selected" : ""} href="/about">bio</a>
   </nav>
 
   <div class="theme-toggle-container">
