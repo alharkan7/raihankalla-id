@@ -16,46 +16,42 @@ const allPosts = await Astro.glob("../data/blog-posts/blog/*.{md,mdx}");
 const sortedPosts = allPosts.sort(
   (a, b) =>
     new Date(b.frontmatter.publishDate).valueOf() -
-    new Date(a.frontmatter.publishDate).valueOf()
+    new Date(a.frontmatter.publishDate).valueOf(),
 );
-
-let isAboutPage = permalink === "/about"; // Example condition
-let current = isAboutPage ? "about" : "";
 ---
 
 <BaseLayout
   title={title}
   description={description}
   permalink={permalink ?? "/"}
-  current={current}
-/>
-  <div class="container">
-    <h1>{title}</h1>
-    <p><b>{description}</b></p>
-    <hr />
-    {
-      sortedPosts.map((post, index) => {
-        const href = `/${post.file.split("/blog/").pop().split(".").shift()}`;
-        return (
-          <div>
-            {index !== 0 && <hr />}
-            <div class="post-item">
-              <h2>
-                <a href={href}>{post.frontmatter.title}</a>
-              </h2>
-              <p>{post.frontmatter.description}</p>
-              <div class="post-item-footer">
-                <span class="post-item-date">
-                  — {post.frontmatter.publishDate}
-                </span>
-              </div>
+  current=""
+>
+<div class="container">
+  <h1>{title}</h1>
+  <p><b>{description}</b></p>
+  <hr />
+  {
+    sortedPosts.map((post, index) => {
+      const href = `/${post.file.split("/blog/").pop().split(".").shift()}`;
+      return (
+        <div>
+          {index !== 0 && <hr />}
+          <div class="post-item">
+            <h2>
+              <a href={href}>{post.frontmatter.title}</a>
+            </h2>
+            <p>{post.frontmatter.description}</p>
+            <div class="post-item-footer">
+              <span class="post-item-date">
+                — {post.frontmatter.publishDate}
+              </span>
             </div>
           </div>
-        );
-      })
-    }
-  </div>
-</BaseLayout>
+        </div>
+      );
+    })
+  }
+</div>
 
 <style>
   h1 {
@@ -78,5 +74,4 @@ let current = isAboutPage ? "about" : "";
   hr {
     margin: 60px auto;
   }
-  
 </style>
