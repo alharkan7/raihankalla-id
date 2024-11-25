@@ -53,6 +53,11 @@ const possiblePaths = ["blog", "stories", "threads", "uncategorized", "works"];
 const isBlogPost = possiblePaths.some((path) =>
   Astro.props.post.file.includes(`blog-posts/${path}`),
 );
+
+const category = isBlogPost 
+  ? Astro.props.post.file.split('blog-posts/')[1].split('/')[0]
+  : '';
+
 ---
 
 <BaseLayout
@@ -62,7 +67,8 @@ const isBlogPost = possiblePaths.some((path) =>
   current={isBlogPost ? "blog" : ""}
 >
   <header>
-    <p>{publishDate} ~ {readingTime}</p>
+    <!-- <p>{publishDate} ~ {readingTime}</p> -->
+    <p><a href={category === "blog" ? "/" : `/${category}`}>#{category}</a> ~ {publishDate}</p>
     <h1>{title}</h1>
     <hr />
   </header>
