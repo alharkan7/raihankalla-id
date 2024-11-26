@@ -4,7 +4,7 @@ import mdx from '@astrojs/mdx'
 import remarkGfm from 'remark-gfm'
 import remarkSmartypants from 'remark-smartypants'
 import rehypeExternalLinks from 'rehype-external-links'
-import netlify from '@astrojs/netlify/static'
+import netlify from '@astrojs/netlify'
 
 export default defineConfig({
   site: 'https://raihankalla.id',

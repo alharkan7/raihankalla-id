@@ -201,27 +201,30 @@ const { current = "" } = Astro.props;
         <a href="https://x.com/alhrkn" target="_blank" rel="noopener noreferrer"
           >Twitter</a
         >
-        <a
+        <!-- <a
           href="https://instagram.com/alhrkn"
           target="_blank"
           rel="noopener noreferrer">Instagram</a
-        >
+        > -->
         <a
           href="https://enaiblr.org"
           target="_blank"
           class="enaiblr-link"
           rel="noopener noreferrer">Enaiblr</a
         >
-        <a
+        <!-- <a
           href="https://linkedin.com/in/alharkan"
           target="_blank"
           rel="noopener noreferrer">LinkedIn</a
-        >
+        > -->
         <a
+          href="/about">Profile</a
+        >
+        <!-- <a
           href="https://github.com/alharkan7"
           target="_blank"
           rel="noopener noreferrer">GitHub</a
-        >
+        > -->
       </div>
     </div>
   </nav>
@@ -242,24 +245,24 @@ const { current = "" } = Astro.props;
     });
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const dropdownContainers = document.querySelectorAll('.dropdown-container');
-    
-    dropdownContainers.forEach(container => {
-      const button = container.querySelector('[data-dropdown-toggle]');
-      const content = container.querySelector('.dropdown-content');
-      
+  document.addEventListener("DOMContentLoaded", () => {
+    const dropdownContainers = document.querySelectorAll(".dropdown-container");
+
+    dropdownContainers.forEach((container) => {
+      const button = container.querySelector("[data-dropdown-toggle]");
+      const content = container.querySelector(".dropdown-content");
+
       if (button && content) {
-        button.addEventListener('click', () => {
+        button.addEventListener("click", () => {
           // Type assertions to HTMLElement
           const buttonEl = button as HTMLElement;
           const contentEl = content as HTMLElement;
-          
+
           // Position the dropdown under the button
           const buttonRect = buttonEl.getBoundingClientRect();
           contentEl.style.top = `${buttonRect.bottom}px`;
           contentEl.style.left = `${buttonRect.left}px`;
-          contentEl.style.transform = 'none';
+          contentEl.style.transform = "none";
         });
       }
     });
