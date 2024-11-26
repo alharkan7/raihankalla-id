@@ -46,7 +46,7 @@ This is the source code for [raihankalla.id](https://www.raihankalla.id), my per
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/raihankalla.id.git
+git clone https://github.com/alharkan7/raihankalla-id.git
 cd raihankalla.id
 ```
 
@@ -60,7 +60,7 @@ pnpm install
 pnpm dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Open [http://localhost:3000](http://localhost:4321) in your browser.
 
 ### Building for Production
 
@@ -100,14 +100,14 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🙏 Acknowledgments
 
 - Built with [Astro](https://astro.build)
-- Deployed on [Vercel](https://vercel.com)
+- Deployed on [Netlify](https://netlify.com)
 - Icons from [Heroicons](https://heroicons.com)
 
 ## 📬 Contact
 
 - Website: [raihankalla.id](https://www.raihankalla.id)
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Twitter: [@yourhandle](https://twitter.com/yourhandle)
+- GitHub: [@yourusername](https://github.com/alharkan7)
+- Twitter: [@yourhandle](https://twitter.com/alhrkn)
 
 ## 🤝 Contributing
 
