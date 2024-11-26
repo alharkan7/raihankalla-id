@@ -68,26 +68,14 @@ const permalink = `${Astro?.site?.href}short`;
 </BaseLayout>
 
 <script>
+  // Load Twitter widgets on initial page load and page updates
   function loadTwitterWidgets() {
-    if (window.twttr) {
+    if (window.twttr && window.twttr.widgets) {
       window.twttr.widgets.load();
-    } else {
-      const script = document.createElement("script");
-      script.src = "https://platform.twitter.com/widgets.js";
-      script.async = true;
-      script.onload = () => {
-        if (window.twttr) {
-          window.twttr.widgets.load();
-        }
-      };
-      document.head.appendChild(script);
     }
   }
 
-  // Load Twitter widgets on initial page load
   document.addEventListener("DOMContentLoaded", loadTwitterWidgets);
-  
-  // Also load Twitter widgets when the page content updates
   document.addEventListener("astro:page-load", loadTwitterWidgets);
 </script>
 
