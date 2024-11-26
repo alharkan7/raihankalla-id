@@ -60,7 +60,7 @@ pnpm install
 pnpm dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:4321) in your browser.
+4. Open [http://localhost:4321](http://localhost:4321) in your browser.
 
 ### Building for Production
 
