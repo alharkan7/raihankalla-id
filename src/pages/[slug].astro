@@ -5,11 +5,19 @@ import getPostData from "../utils/getPostData";
 import { findRedirect } from "../utils/redirectHandler";
 
 export async function getStaticPaths() {
-  const blogPosts:any = await Astro.glob("../data/blog-posts/blog/*.{md,mdx}");
-  const storyPosts:any = await Astro.glob("../data/blog-posts/stories/*.{md,mdx}");
-  const threadPosts:any = await Astro.glob("../data/blog-posts/threads/*.{md,mdx}");
-  const workPosts:any = await Astro.glob("../data/blog-posts/works/*.{md,mdx}");
-  const uncategorizedPosts:any = await Astro.glob("../data/blog-posts/uncategorized/*.{md,mdx}");
+  const blogPosts: any = await Astro.glob("../data/blog-posts/blog/*.{md,mdx}");
+  const storyPosts: any = await Astro.glob(
+    "../data/blog-posts/stories/*.{md,mdx}",
+  );
+  const threadPosts: any = await Astro.glob(
+    "../data/blog-posts/threads/*.{md,mdx}",
+  );
+  const workPosts: any = await Astro.glob(
+    "../data/blog-posts/works/*.{md,mdx}",
+  );
+  const uncategorizedPosts: any = await Astro.glob(
+    "../data/blog-posts/uncategorized/*.{md,mdx}",
+  );
   const allPosts = [
     ...blogPosts,
     ...storyPosts,
@@ -54,9 +62,37 @@ const isBlogPost = possiblePaths.some((path) =>
   Astro.props.post.file.includes(`blog-posts/${path}`),
 );
 
-const category = isBlogPost 
-  ? Astro.props.post.file.split('blog-posts/')[1].split('/')[0]
-  : '';
+const category = isBlogPost
+  ? Astro.props.post.file.split("blog-posts/")[1].split("/")[0]
+  : "";
+
+// Get recommended posts from the same category
+const getRecommendedPosts = async () => {
+  let categoryPosts;
+  if (category === 'blog') {
+    categoryPosts = await Astro.glob("../data/blog-posts/blog/*.{md,mdx}");
+  } else if (category === 'stories') {
+    categoryPosts = await Astro.glob("../data/blog-posts/stories/*.{md,mdx}");
+  } else if (category === 'threads') {
+    categoryPosts = await Astro.glob("../data/blog-posts/threads/*.{md,mdx}");
+  } else if (category === 'works') {
+    categoryPosts = await Astro.glob("../data/blog-posts/works/*.{md,mdx}");
+  } else {
+    categoryPosts = await Astro.glob("../data/blog-posts/uncategorized/*.{md,mdx}");
+  }
+  
+  // Filter out current post and get 2 random posts
+  return categoryPosts
+    .filter(post => post.file !== Astro.props.post.file)
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 2)
+    .map(post => ({
+      title: post.frontmatter.title,
+      slug: post.file.split("/").pop().split(".").shift()
+    }));
+};
+
+const recommendedPosts = await getRecommendedPosts();
 
 ---
 
@@ -69,11 +105,11 @@ const category = isBlogPost
   <header>
     <!-- <p>{publishDate} ~ {readingTime}</p> -->
     <p>
-  <a href={category === "blog" ? "/" : `/${category}`}>
-    {category === "blog" ? "featured" : `#${category}`}
-  </a>
-  ~ {publishDate}
-</p>
+      <a href={category === "blog" ? "/" : `/${category}`}>
+        {category === "blog" ? "featured" : `#${category}`}
+      </a>
+      ~ {publishDate}
+    </p>
     <h1>{title}</h1>
     <hr />
   </header>
@@ -81,6 +117,20 @@ const category = isBlogPost
     <article class="content">
       <Content />
     </article>
+
+    {recommendedPosts.length > 0 && (
+      <div class="recommended-posts">
+        <h3>Read more posts in #{category}</h3>
+        <div class="recommended-grid">
+          {recommendedPosts.map((post) => (
+            <a href={`/${post.slug}`} class="recommended-post">
+              {post.title}
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
     <hr />
     <Bio />
   </div>
@@ -105,5 +155,38 @@ const category = isBlogPost
   header hr {
     min-width: 100px;
     width: 30%;
+  }
+
+  .recommended-posts {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--text-secondary);
+  }
+
+  .recommended-posts h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+  }
+
+  .recommended-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .recommended-post {
+    padding: 1rem;
+    border: 1px solid var(--text-secondary);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: var(--text-regular);
+    transition: all 0.2s ease;
+  }
+
+  .recommended-post:hover {
+    background: var(--text-secondary);
+    color: var(--background);
   }
 </style>
