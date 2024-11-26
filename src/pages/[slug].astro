@@ -123,8 +123,7 @@ const recommendedPosts = await getRecommendedPosts();
       recommendedPosts.length > 0 && (
         <div class="recommended-posts">
           <h3>
-            Read more posts in #
-            <a href={category === "blog" ? "/" : `/${category}`}>
+            Read more posts in #<a href={category === "blog" ? "/" : `/${category}`}>
               {category === "blog" ? "featured" : `#${category}`}
             </a>
           </h3>
