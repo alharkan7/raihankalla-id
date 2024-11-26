@@ -1,8 +1,5 @@
 # raihankalla.id
 
-[![Built with Astro](https://astro.badgen.net/badge/built%20with/Astro/purple)](https://astro.build)
-[![GitHub License](https://img.shields.io/github/license/yourusername/raihankalla.id)](https://github.com/alharkan7/raihankalla-id/blob/main/LICENSE)
-
 This is the source code for [raihankalla.id](https://www.raihankalla.id), my personal blog built with [Astro](https://astro.build) - the modern web framework for content-driven websites.
 
 ## 🚀 Project Structure
