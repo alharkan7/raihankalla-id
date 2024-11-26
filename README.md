@@ -78,8 +78,7 @@ Posts are written in MDX format and stored in `src/content/blog/`. Each post sho
 ---
 title: Your Post Title
 description: A brief description of your post
-date: 2024-01-01
-tags: [tag1, tag2]
+pubDate: 2024-01-01
 ---
 ```
 
@@ -106,8 +105,8 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 📬 Contact
 
 - Website: [raihankalla.id](https://www.raihankalla.id)
-- GitHub: [@yourusername](https://github.com/alharkan7)
-- Twitter: [@yourhandle](https://twitter.com/alhrkn)
+- GitHub: [@alharkan7](https://github.com/alharkan7)
+- Twitter: [@yalhrkn](https://twitter.com/alhrkn)
 
 ## 🤝 Contributing
 
