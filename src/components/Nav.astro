@@ -162,7 +162,7 @@ const { current = "" } = Astro.props;
 
 <div class="nav-container">
   <nav>
-    <a class={current === "" || current === "about" ? "selected" : ""} href="/"
+    <a class={current === "" ? "selected" : ""} href="/"
       >home</a
     >
     <a class={current === "threads" ? "selected" : ""} href="/threads"
