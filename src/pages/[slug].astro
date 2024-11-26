@@ -69,31 +69,32 @@ const category = isBlogPost
 // Get recommended posts from the same category
 const getRecommendedPosts = async () => {
   let categoryPosts;
-  if (category === 'blog') {
+  if (category === "blog") {
     categoryPosts = await Astro.glob("../data/blog-posts/blog/*.{md,mdx}");
-  } else if (category === 'stories') {
+  } else if (category === "stories") {
     categoryPosts = await Astro.glob("../data/blog-posts/stories/*.{md,mdx}");
-  } else if (category === 'threads') {
+  } else if (category === "threads") {
     categoryPosts = await Astro.glob("../data/blog-posts/threads/*.{md,mdx}");
-  } else if (category === 'works') {
+  } else if (category === "works") {
     categoryPosts = await Astro.glob("../data/blog-posts/works/*.{md,mdx}");
   } else {
-    categoryPosts = await Astro.glob("../data/blog-posts/uncategorized/*.{md,mdx}");
+    categoryPosts = await Astro.glob(
+      "../data/blog-posts/uncategorized/*.{md,mdx}",
+    );
   }
-  
+
   // Filter out current post and get 2 random posts
   return categoryPosts
-    .filter(post => post.file !== Astro.props.post.file)
+    .filter((post) => post.file !== Astro.props.post.file)
     .sort(() => Math.random() - 0.5)
     .slice(0, 2)
-    .map(post => ({
+    .map((post) => ({
       title: post.frontmatter.title,
-      slug: post.file.split("/").pop().split(".").shift()
+      slug: post.file.split("/").pop().split(".").shift(),
     }));
 };
 
 const recommendedPosts = await getRecommendedPosts();
-
 ---
 
 <BaseLayout
@@ -118,18 +119,25 @@ const recommendedPosts = await getRecommendedPosts();
       <Content />
     </article>
 
-    {recommendedPosts.length > 0 && (
-      <div class="recommended-posts">
-        <h3>Read more posts in #{category}</h3>
-        <div class="recommended-grid">
-          {recommendedPosts.map((post) => (
-            <a href={`/${post.slug}`} class="recommended-post">
-              {post.title}
+    {
+      recommendedPosts.length > 0 && (
+        <div class="recommended-posts">
+          <h3>
+            Read more posts in #
+            <a href={category === "blog" ? "/" : `/${category}`}>
+              {category === "blog" ? "featured" : `#${category}`}
             </a>
-          ))}
+          </h3>
+          <div class="recommended-grid">
+            {recommendedPosts.map((post) => (
+              <a href={`/${post.slug}`} class="recommended-post">
+                {post.title}
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
-    )}
+      )
+    }
 
     <hr />
     <Bio />
@@ -183,10 +191,22 @@ const recommendedPosts = await getRecommendedPosts();
     text-decoration: none;
     color: var(--text-regular);
     transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   .recommended-post:hover {
-    background: var(--text-secondary);
-    color: var(--background);
+    /* background: var(--text-secondary);*/
+    text-decoration: none;
+    color: var(--primary-color);
+    box-shadow: inset 0 -0.12em 0 var(--primary-color);
+    -webkit-transition:
+      box-shadow 0.2s ease-in-out,
+      color 0.2s ease-in-out;
+    transition:
+      box-shadow 0.2s ease-in-out,
+      color 0.2s ease-in-out;
   }
 </style>
