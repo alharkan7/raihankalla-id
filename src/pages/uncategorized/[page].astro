@@ -2,6 +2,14 @@
 import type { GetStaticPaths, Page } from "astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
+// Check if user is logged in
+const isLoggedIn = Astro.cookies.get('isLoggedIn')?.value === 'true';
+
+// If not logged in, redirect to login page
+if (!isLoggedIn) {
+  return Astro.redirect('/login');
+}
+
 interface BlogPost {
     file: string;
     frontmatter: {

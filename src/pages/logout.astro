@@ -1,0 +1,7 @@
+---
+// Clear the login cookie and redirect to home
+Astro.cookies.delete('isLoggedIn', {
+  path: '/',
+});
+return Astro.redirect('/');
+---

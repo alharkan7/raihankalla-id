@@ -14,6 +14,7 @@ export default defineConfig({
       'frame-src': ["'self'", 'platform.twitter.com'],
     },
   },
+  output: 'server',
   integrations: [
     svelte(),
     mdx(
