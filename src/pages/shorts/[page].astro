@@ -2,6 +2,8 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { tweetEmbeds } from "../../data/tweet-shorts.ts";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const tweetsPerPage = 5;
   const totalPages = Math.ceil(tweetEmbeds.length / tweetsPerPage);
