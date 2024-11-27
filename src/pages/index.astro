@@ -30,12 +30,11 @@ const paginatedPosts = sortedPosts.slice(0, postsPerPage);
   <div class="container">
     <h1>{title}</h1>
     <p><b>{description}</b></p>
-    
+    <hr />
     {
       paginatedPosts.map((post, index) => {
         const href = `/${post.file.split("/blog/").pop().split(".").shift()}`;
         return (
-          <hr />
           <div>
             {index !== 0 && <hr />}
             <div class="post-item">
@@ -93,7 +92,7 @@ const paginatedPosts = sortedPosts.slice(0, postsPerPage);
     .pagination {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 40px;
+      margin-top: 60px;
       /* padding: 1rem 0; */
     }
 

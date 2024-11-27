@@ -42,6 +42,7 @@ const permalink = Astro.site?.href ? `${Astro.site.href}stories` : "/stories";
 >
     <div class="container">
         <h1>Stories</h1>
+        <hr />
         {
             page.data.map((post: BlogPost, index: number) => {
                 const href = `/${post.file.split("/stories/").pop()?.split(".").shift()}`;
@@ -63,8 +64,6 @@ const permalink = Astro.site?.href ? `${Astro.site.href}stories` : "/stories";
                 );
             })
         }
-
-        <hr />
 
         <div class="pagination">
             {
@@ -109,7 +108,7 @@ const permalink = Astro.site?.href ? `${Astro.site.href}stories` : "/stories";
         .pagination {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 40px;
+            margin-top: 60px;
             /* padding: 1rem 0; */
         }
 
