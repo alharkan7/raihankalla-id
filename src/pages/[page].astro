@@ -29,6 +29,12 @@ export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
 };
 
 const { page } = Astro.props as Props;
+
+// Ensure page exists before proceeding
+if (!page || !page.data) {
+    return Astro.redirect('/404');
+}
+
 const title = "Al Harkan's Blog";
 const description =
     "My Written Thoughts on Media, Technology, and Everything in Between";

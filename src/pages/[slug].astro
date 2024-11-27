@@ -4,6 +4,8 @@ import Bio from "../components/Bio.astro";
 import getPostData from "../utils/getPostData";
 import { findRedirect } from "../utils/redirectHandler";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const blogPosts: any = await Astro.glob("../data/blog-posts/blog/*.{md,mdx}");
   const storyPosts: any = await Astro.glob(
@@ -42,6 +44,13 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
+
+// Check if post exists in props
+if (!Astro.props.post) {
+  console.error(`Post not found for slug: ${slug}`);
+  return Astro.redirect('/404');
+}
+
 const { Content, frontmatter } = Astro.props.post;
 
 // Check for redirection
@@ -65,6 +74,14 @@ const isBlogPost = possiblePaths.some((path) =>
 const category = isBlogPost
   ? Astro.props.post.file.split("blog-posts/")[1].split("/")[0]
   : "";
+
+// Check authentication for uncategorized posts
+if (category === "uncategorized") {
+  const isLoggedIn = Astro.cookies.get('isLoggedIn')?.value === 'true';
+  if (!isLoggedIn) {
+    return Astro.redirect('/login');
+  }
+}
 
 // Get recommended posts from the same category
 const getRecommendedPosts = async () => {
