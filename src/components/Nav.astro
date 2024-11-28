@@ -162,9 +162,7 @@ const { current = "" } = Astro.props;
 
 <div class="nav-container">
   <nav>
-    <a class={current === "" ? "selected" : ""} href="/"
-      >home</a
-    >
+    <a class={current === "" ? "selected" : ""} href="/">home</a>
     <a class={current === "threads" ? "selected" : ""} href="/threads"
       >threads</a
     >
@@ -187,6 +185,7 @@ const { current = "" } = Astro.props;
         <a href="/shorts">Shorts</a>
         <a href="/stories">Stories</a>
         <a href="/works">Works</a>
+        <!-- <a href="/uncategorized">Uncategorized</a> -->
         <a href="/search">Search</a>
       </div>
     </div>
@@ -219,9 +218,10 @@ const { current = "" } = Astro.props;
           target="_blank"
           rel="noopener noreferrer">LinkedIn</a
         > -->
-        <a
-          href="/about">Profile</a
-        >
+        <a href="/about">Profile</a>
+        <!-- <a
+        href="/logout">Logout</a
+      > -->
         <!-- <a
           href="https://github.com/alharkan7"
           target="_blank"
