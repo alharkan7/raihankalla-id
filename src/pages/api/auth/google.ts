@@ -46,71 +46,66 @@ if (!getApps().length) {
 const adminAuth = getAuth();
 
 export const POST: APIRoute = async ({ request }) => {
-    try {
-      console.log("Received auth request");
-      const body = await request.json();
-      console.log("Request body:", body);  // Log full body for debugging
-      
-      const idToken = body.token;  // Changed from destructuring to match frontend
-      
-      if (!idToken) {
-        console.error("No token provided in request body");
-        return new Response(JSON.stringify({ error: "No token provided" }), {
-          status: 400,
-          headers: { 'Content-Type': 'application/json' }
-        });
-      }
-      
-      // Verify the ID token using Admin SDK
-      console.log("Verifying ID token...");
-      try {
-        const decodedToken = await adminAuth.verifyIdToken(idToken);
-        console.log("Token verified for user:", decodedToken.uid, "email:", decodedToken.email);
-        
-        // Create a session cookie
-        const expiresIn = 60 * 60 * 24 * 5 * 1000; // 5 days
-        console.log("Creating session cookie...");
-        
-        try {
-          const sessionCookie = await adminAuth.createSessionCookie(idToken, { expiresIn });
-          console.log("Session cookie created successfully");
-          
-          // Create response headers
-          const headers = new Headers();
-          headers.set('Content-Type', 'application/json');
-          
-          // Set session cookie
-          const cookieValue = `session=${sessionCookie}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${expiresIn/1000}`;
-          console.log("Setting cookie header");
-          headers.append('Set-Cookie', cookieValue);
-          
-          console.log("Sending successful response");
-          return new Response(JSON.stringify({ 
-            success: true,
-            uid: decodedToken.uid,
-            email: decodedToken.email 
-          }), {
-            status: 200,
-            headers
-          });
-        } catch (cookieError) {
-          console.error("Failed to create session cookie:", cookieError);
-          throw cookieError;
-        }
-      } catch (verifyError) {
-        console.error("Failed to verify ID token:", verifyError);
-        throw verifyError;
-      }
-    } catch (error) {
-      console.error("Auth error:", error);
+  try {
+    console.log("Received auth request");
+    const body = await request.json();
+    console.log("Request body:", {...body, token: body.token ? `${body.token.substring(0, 10)}...` : 'none'});
+    
+    const { token } = body;
+    
+    if (!token) {
+      console.error("No token provided in request body");
       return new Response(JSON.stringify({ 
-        error: "Authentication failed",
-        details: error instanceof Error ? error.message : String(error)
+        error: "No token provided",
+        receivedBody: body // This will help debug what's actually being received
       }), {
-        status: 401,
+        status: 400,
         headers: { 'Content-Type': 'application/json' }
       });
     }
+    
+    // Verify the ID token using Admin SDK
+    console.log("Verifying ID token...");
+    try {
+      const decodedToken = await adminAuth.verifyIdToken(token);
+      console.log("Token verified for user:", decodedToken.uid, "email:", decodedToken.email);
+      
+      // Create a session cookie
+      const expiresIn = 60 * 60 * 24 * 5 * 1000; // 5 days
+      console.log("Creating session cookie...");
+      
+      const sessionCookie = await adminAuth.createSessionCookie(token, { expiresIn });
+      console.log("Session cookie created successfully");
+      
+      // Create response with cookie
+      const headers = new Headers();
+      headers.set('Content-Type', 'application/json');
+      
+      const cookieValue = `session=${sessionCookie}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${expiresIn/1000}`;
+      headers.append('Set-Cookie', cookieValue);
+      
+      return new Response(JSON.stringify({ 
+        success: true,
+        uid: decodedToken.uid,
+        email: decodedToken.email 
+      }), {
+        status: 200,
+        headers
+      });
+    } catch (error) {
+      console.error("Token verification failed:", error);
+      throw error;
+    }
+  } catch (error) {
+    console.error("Auth error:", error);
+    return new Response(JSON.stringify({ 
+      error: "Authentication failed",
+      details: error instanceof Error ? error.message : String(error)
+    }), {
+      status: 401,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
 };
 
 export const GET: APIRoute = async ({ cookies }) => {

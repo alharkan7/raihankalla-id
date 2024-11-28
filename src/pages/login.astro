@@ -95,69 +95,93 @@ let error = "";
     getRedirectResult,
   } from "firebase/auth";
 
-  // Check for redirect result when page loads
-  window.addEventListener("load", async () => {
-    console.log("Page loaded, checking for redirect result...");
-    try {
-      const result = await getRedirectResult(auth);
-      console.log("Got redirect result:", result ? "success" : "no result");
+// Check for redirect result when page loads
+window.addEventListener("load", async () => {
+  console.log("Page loaded, checking for redirect result...");
+  try {
+    const result = await getRedirectResult(auth);
+    console.log("Redirect result:", result);
 
-      if (result) {
-        console.log("User signed in:", result.user.email);
-        const idToken = await result.user.getIdToken();
-        console.log("Got ID token, sending to backend...");
+    if (result && result.user) {
+      console.log("User signed in:", result.user.email);
+      
+      // Force token refresh to ensure we have the latest token
+      const idToken = await result.user.getIdToken(true);
+      console.log("Got ID token, length:", idToken.length);
 
-        // Send the token to your backend
-        const response = await fetch('/api/auth/google', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ token: idToken }),
-          credentials: 'include'  // Important for cookie handling
-        });
+      // Make sure we're sending the token correctly
+      const response = await fetch('/api/auth/google', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ 
+          token: idToken,
+          email: result.user.email,
+          uid: result.user.uid
+        }),
+        credentials: 'include'
+      });
 
-        if (!response.ok) {
-          const errorData = await response.json();
-          console.error("Backend auth failed:", errorData);
-          throw new Error(
-            `Backend auth failed: ${errorData.message || response.statusText}`,
-          );
-        }
+      console.log("Response status:", response.status);
+      const responseData = await response.json();
+      console.log("Backend response data:", responseData);
 
-        console.log("Backend auth successful, redirecting...");
-        window.location.href = "/uncategorized";
+      if (!response.ok) {
+        throw new Error(
+          `Backend auth failed: ${responseData.message || response.statusText}`
+        );
       }
-    } catch (error: unknown) {
-      // explicitly type error as unknown
-      console.error("Google sign-in error:", error);
-      // Show error to user
+
+      console.log("Backend auth successful, redirecting...");
+      window.location.href = "/uncategorized";
+    } else {
+      console.log("No redirect result - normal page load");
+    }
+  } catch (error) {
+    console.error("Google sign-in error:", error);
+    // Show error to user
+    const errorDiv = document.createElement("div");
+    errorDiv.className = "error-message";
+    errorDiv.textContent =
+      error instanceof Error
+        ? `Sign-in error: ${error.message}`
+        : "Failed to sign in with Google";
+    document
+      .querySelector(".login-form")
+      ?.insertAdjacentElement("beforebegin", errorDiv);
+  }
+});
+
+// Google Sign In Handler
+document
+  .getElementById("google-login")
+  ?.addEventListener("click", async () => {
+    console.log("Google login button clicked");
+    try {
+      const provider = new GoogleAuthProvider();
+      // Add more scopes if needed
+      provider.addScope('email');
+      provider.addScope('profile');
+      
+      provider.setCustomParameters({
+        prompt: "select_account",
+      });
+      
+      console.log("Starting Google sign-in redirect...");
+      await signInWithRedirect(auth, provider);
+    } catch (error) {
+      console.error("Failed to start Google sign-in:", error);
       const errorDiv = document.createElement("div");
       errorDiv.className = "error-message";
-      errorDiv.textContent =
-        error instanceof Error
-          ? error.message
-          : "Failed to sign in with Google";
+      errorDiv.textContent = error instanceof Error
+        ? `Failed to start Google sign-in: ${error.message}`
+        : "Failed to start Google sign-in";
       document
         .querySelector(".login-form")
         ?.insertAdjacentElement("beforebegin", errorDiv);
     }
   });
-
-  // Google Sign In Handler
-  document
-    .getElementById("google-login")
-    ?.addEventListener("click", async () => {
-      try {
-        const provider = new GoogleAuthProvider();
-        provider.setCustomParameters({
-          prompt: "select_account",
-        });
-        await signInWithRedirect(auth, provider);
-      } catch (error) {
-        console.error("Failed to start Google sign-in:", error);
-      }
-    });
 
   // Handle email/password login
   const loginForm = document.getElementById("login-form");
@@ -173,25 +197,40 @@ let error = "";
         email,
         password,
       );
-      const idToken = await userCredential.user.getIdToken();
-
-      // Send the token to your backend
+      
+      // Force token refresh to ensure we have the latest token
+      const token = await userCredential.user.getIdToken(true);
+      
+      // Send the token to your backend - note the correct format matching Google sign-in
       const response = await fetch("/api/auth/google", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ idToken }),
+        body: JSON.stringify({ 
+          token,
+          email: userCredential.user.email,
+          uid: userCredential.user.uid
+        }),
+        credentials: 'include'
       });
 
-      if (response.ok) {
-        window.location.href = "/uncategorized";
-      } else {
-        throw new Error("Failed to create session");
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to create session');
       }
+
+      console.log("Login successful, redirecting...");
+      window.location.href = "/uncategorized";
     } catch (error) {
       console.error("Login error:", error);
-      alert("Login failed. Please check your credentials and try again.");
+      const errorMessage = error instanceof Error ? error.message : "Login failed";
+      const errorDiv = document.createElement("div");
+      errorDiv.className = "error-message";
+      errorDiv.textContent = errorMessage;
+      document
+        .querySelector(".login-form")
+        ?.insertAdjacentElement("beforebegin", errorDiv);
     }
   });
 
