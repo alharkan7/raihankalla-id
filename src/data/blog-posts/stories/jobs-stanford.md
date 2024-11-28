@@ -1,6 +1,6 @@
 ---
 title: 'Cerita Jobs di Upacara Kelulusan Stanford'
-description: 'Jika ada _audio file_ yang sering saya putar berulang-ulang tapi bukan sebuah musik, itu adalah rekaman pidato Steve Jobs di upacara kelulusan Stanford University.'
+description: 'Jika ada audio file yang sering saya putar berulang-ulang tapi bukan sebuah musik, itu adalah rekaman pidato Steve Jobs di upacara kelulusan Stanford University.'
 publishDate: '09 Apr 2017'
 ---
 
