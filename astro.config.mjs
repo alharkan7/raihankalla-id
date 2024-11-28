@@ -10,9 +10,38 @@ export default defineConfig({
   site: 'https://raihankalla.id',
   security: {
     directives: {
-      'script-src': ["'self'", "'unsafe-inline'", 'platform.twitter.com'],
-      'frame-src': ["'self'", 'platform.twitter.com'],
-    },
+      'script-src': [
+        "'self'",
+        "'unsafe-inline'",
+        "'unsafe-eval'",
+        'platform.twitter.com',
+        'apis.google.com',
+        '*.firebaseapp.com',
+        'localhost:4321',
+        '*.googleapis.com'
+      ],
+      'frame-src': [
+        "'self'",
+        'platform.twitter.com',
+        'accounts.google.com',
+        '*.firebaseapp.com',
+        'localhost:4321',
+        '*.google.com'
+      ],
+      'connect-src': [
+        "'self'",
+        'identitytoolkit.googleapis.com',
+        '*.firebaseio.com',
+        '*.firebase.com',
+        'localhost:4321',
+        '*.googleapis.com',
+        'securetoken.googleapis.com'
+      ],
+      'frame-ancestors': ["'self'"],
+      'cross-origin-opener-policy': ['unsafe-none'],
+      'cross-origin-embedder-policy': ['unsafe-none'],
+      'cross-origin-resource-policy': ['cross-origin']
+    }
   },
   output: 'server',
   integrations: [

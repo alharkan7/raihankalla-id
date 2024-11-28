@@ -2,10 +2,10 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 // Check if user is logged in
-const isLoggedIn = Astro.cookies.get('isLoggedIn')?.value === 'true';
+const session = Astro.cookies.get('session')?.value;
 
 // If not logged in, redirect to login page
-if (!isLoggedIn) {
+if (!session) {
   return Astro.redirect('/login');
 }
 

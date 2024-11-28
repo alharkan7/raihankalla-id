@@ -1,35 +1,31 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { auth } from "../lib/firebase";
 
-let error = '';
+// Check if user is already logged in
+const session = Astro.cookies.get("session")?.value;
 
-if (Astro.request.method === 'POST') {
+if (session) {
   try {
-    const data = await Astro.request.formData();
-    const username = data.get('username');
-    const password = data.get('password');
+    const response = await fetch(`${Astro.url.origin}/api/auth/google`, {
+      method: "GET",
+      headers: {
+        Cookie: `session=${session}`,
+      },
+    });
 
-    if (
-      username === import.meta.env.PUBLIC_USERNAME &&
-      password === import.meta.env.PUBLIC_PASSWORD
-    ) {
-      Astro.cookies.set('isLoggedIn', 'true', {
-        path: '/',
-        httpOnly: true,
-        secure: true,
-        sameSite: 'strict',
-      });
-      return Astro.redirect('/uncategorized');
-    } else {
-      error = 'Invalid credentials';
+    if (response.ok) {
+      return Astro.redirect("/uncategorized");
     }
-  } catch (e) {
-    error = 'Something went wrong';
+  } catch (error) {
+    console.error("Session verification failed:", error);
   }
 }
+
+let error = "";
 ---
 
-<BaseLayout 
+<BaseLayout
   title="Login - Al Harkan"
   description="Login to Al Harkan's Blog"
   permalink={`${Astro.site}login`}
@@ -38,16 +34,16 @@ if (Astro.request.method === 'POST') {
     <div class="min-h-[80vh] flex flex-col items-center justify-center">
       <div class="w-full max-w-md bg-white p-8 rounded-lg shadow-lg">
         <h1 class="login-title">Login</h1>
-        
+
         {error && <p class="error-message">{error}</p>}
-        
-        <form method="POST" class="login-form">
+
+        <form id="login-form" class="login-form">
           <div class="input-group">
             <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="Username"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
               required
               class="login-input"
             />
@@ -60,18 +56,180 @@ if (Astro.request.method === 'POST') {
               class="login-input"
             />
           </div>
-          
-          <button
-            type="submit"
-            class="login-button"
-          >
-            Sign in
-          </button>
+
+          <button type="submit" class="login-button"> Sign in </button>
         </form>
+        <div class="divider">or</div>
+        <button id="google-login" class="google-login-button">
+          <svg class="google-icon" width="18" height="18" viewBox="0 0 18 18">
+            <path
+              fill="#4285F4"
+              d="M17.64 9.205c0-.639-.057-1.252-.164-1.841H9v3.481h4.844a4.14 4.14 0 0 1-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"
+            ></path>
+            <path
+              fill="#34A853"
+              d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z"
+            ></path>
+            <path
+              fill="#FBBC05"
+              d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"
+            ></path>
+            <path
+              fill="#EA4335"
+              d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z"
+            ></path>
+          </svg>
+          Sign in with Google
+        </button>
       </div>
     </div>
   </div>
 </BaseLayout>
+
+<script>
+  import { auth } from "../lib/firebase";
+  import {
+    GoogleAuthProvider,
+    signInWithRedirect,
+    signInWithEmailAndPassword,
+    getRedirectResult,
+  } from "firebase/auth";
+
+  // Check for redirect result when page loads
+  window.addEventListener("load", async () => {
+    console.log("Page loaded, checking for redirect result...");
+    try {
+      const result = await getRedirectResult(auth);
+      console.log("Got redirect result:", result ? "success" : "no result");
+
+      if (result) {
+        console.log("User signed in:", result.user.email);
+        const idToken = await result.user.getIdToken();
+        console.log("Got ID token, sending to backend...");
+
+        // Send the token to your backend
+        const response = await fetch('/api/auth/google', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ token: idToken }),
+          credentials: 'include'  // Important for cookie handling
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          console.error("Backend auth failed:", errorData);
+          throw new Error(
+            `Backend auth failed: ${errorData.message || response.statusText}`,
+          );
+        }
+
+        console.log("Backend auth successful, redirecting...");
+        window.location.href = "/uncategorized";
+      }
+    } catch (error: unknown) {
+      // explicitly type error as unknown
+      console.error("Google sign-in error:", error);
+      // Show error to user
+      const errorDiv = document.createElement("div");
+      errorDiv.className = "error-message";
+      errorDiv.textContent =
+        error instanceof Error
+          ? error.message
+          : "Failed to sign in with Google";
+      document
+        .querySelector(".login-form")
+        ?.insertAdjacentElement("beforebegin", errorDiv);
+    }
+  });
+
+  // Google Sign In Handler
+  document
+    .getElementById("google-login")
+    ?.addEventListener("click", async () => {
+      try {
+        const provider = new GoogleAuthProvider();
+        provider.setCustomParameters({
+          prompt: "select_account",
+        });
+        await signInWithRedirect(auth, provider);
+      } catch (error) {
+        console.error("Failed to start Google sign-in:", error);
+      }
+    });
+
+  // Handle email/password login
+  const loginForm = document.getElementById("login-form");
+  loginForm?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = (document.getElementById("email") as HTMLInputElement).value;
+    const password = (document.getElementById("password") as HTMLInputElement)
+      .value;
+
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password,
+      );
+      const idToken = await userCredential.user.getIdToken();
+
+      // Send the token to your backend
+      const response = await fetch("/api/auth/google", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ idToken }),
+      });
+
+      if (response.ok) {
+        window.location.href = "/uncategorized";
+      } else {
+        throw new Error("Failed to create session");
+      }
+    } catch (error) {
+      console.error("Login error:", error);
+      alert("Login failed. Please check your credentials and try again.");
+    }
+  });
+
+  // Handle Google login
+  const googleButton = document.getElementById("google-login");
+  const provider = new GoogleAuthProvider();
+  let isRedirecting = false;
+
+  googleButton?.addEventListener("click", async () => {
+    if (isRedirecting) return;
+
+    try {
+      console.log("Starting Google sign-in process...");
+      isRedirecting = true;
+      if (googleButton instanceof HTMLButtonElement) {
+        googleButton.disabled = true;
+        googleButton.innerHTML =
+          '<img src="/google-icon.svg" alt="Google Icon" width="18" height="18" class="google-icon" /> Signing in...';
+      }
+
+      provider.setCustomParameters({
+        prompt: "select_account",
+      });
+
+      console.log("Initiating redirect to Google...");
+      await signInWithRedirect(auth, provider);
+    } catch (error) {
+      console.error("Google login error:", error);
+      alert("Google login failed. Please try again.");
+      isRedirecting = false;
+      if (googleButton instanceof HTMLButtonElement) {
+        googleButton.disabled = false;
+        googleButton.innerHTML =
+          '<img src="/google-icon.svg" alt="Google Icon" width="18" height="18" class="google-icon" /> Sign in with Google';
+      }
+    }
+  });
+</script>
 
 <style>
   /* Make styles more specific to override global styles */
@@ -142,5 +300,65 @@ if (Astro.request.method === 'POST') {
 
   .container .login-button:active {
     background: var(--primary-color);
+  }
+
+  .divider {
+    @apply my-6 text-center text-gray-500;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+
+  .divider::before,
+  .divider::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #e5e7eb;
+    width: calc(50% - 20px);
+  }
+
+  .divider::before {
+    left: 0;
+  }
+
+  .divider::after {
+    right: 0;
+  }
+
+  .google-login-button {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    font-size: 1.2rem;
+    background: var(--background-body);
+    border: 1px solid;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--text-primary);
+  }
+
+  .google-login-button:hover {
+    background: var(--primary-color);
+  }
+
+  .google-login-button:active {
+    background: var(--primary-color);
+  }
+
+  .google-icon {
+    @apply flex-shrink-0;
+    width: 18px;
+    height: 18px;
   }
 </style>

@@ -62,8 +62,8 @@ if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
 <button
   class="theme-toggle"
   on:click={toggleTheme}
-  title="Toggle theme"
-  aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
+  {...$$restProps}
+  aria-label={`Toggle theme to ${theme === 'light' ? 'dark' : 'light'} mode`}
 >
   {@html icons[theme === 'light' ? 'dark' : 'light']}
 </button>
