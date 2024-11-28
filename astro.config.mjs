@@ -7,7 +7,7 @@ import rehypeExternalLinks from 'rehype-external-links'
 import netlify from '@astrojs/netlify'
 
 export default defineConfig({
-  site: 'https://raihankalla.id',
+  site: import.meta.env.PROD ? 'https://raihankalla.id' : 'http://localhost:4321', // Or your dev port
   security: {
     directives: {
       'script-src': [

@@ -15,7 +15,7 @@ if (session) {
     });
 
     if (response.ok) {
-      return Astro.redirect("/uncategorized");
+      return window.location.href = "/uncategorized";
     }
   } catch (error) {
     console.error("Session verification failed:", error);
@@ -95,83 +95,30 @@ let error = "";
     getRedirectResult,
   } from "firebase/auth";
 
-// Check for redirect result when page loads
-window.addEventListener("load", async () => {
-  console.log("Page loaded, checking for redirect result...");
-  try {
-    const result = await getRedirectResult(auth);
-    console.log("Redirect result:", result);
-
-    if (result && result.user) {
-      console.log("User signed in:", result.user.email);
-      
-      // Force token refresh to ensure we have the latest token
-      const idToken = await result.user.getIdToken(true);
-      console.log("Got ID token, length:", idToken.length);
-
-      // Make sure we're sending the token correctly
-      const response = await fetch('/api/auth/google', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ 
-          token: idToken,
-          email: result.user.email,
-          uid: result.user.uid
-        }),
-        credentials: 'include'
-      });
-
-      console.log("Response status:", response.status);
-      const responseData = await response.json();
-      console.log("Backend response data:", responseData);
-
-      if (!response.ok) {
-        throw new Error(
-          `Backend auth failed: ${responseData.message || response.statusText}`
-        );
-      }
-
-      console.log("Backend auth successful, redirecting...");
-      window.location.href = "/uncategorized";
-    } else {
-      console.log("No redirect result - normal page load");
-    }
-  } catch (error) {
-    console.error("Google sign-in error:", error);
-    // Show error to user
-    const errorDiv = document.createElement("div");
-    errorDiv.className = "error-message";
-    errorDiv.textContent =
-      error instanceof Error
-        ? `Sign-in error: ${error.message}`
-        : "Failed to sign in with Google";
-    document
-      .querySelector(".login-form")
-      ?.insertAdjacentElement("beforebegin", errorDiv);
-  }
-});
-
-// Google Sign In Handler
-document
-  .getElementById("google-login")
-  ?.addEventListener("click", async () => {
-    console.log("Google login button clicked");
+  // Check for redirect result when page loads - THIS IS THE ONLY GOOGLE HANDLER YOU NEED
+  window.addEventListener("load", async () => {
     try {
-      const provider = new GoogleAuthProvider();
-      // Add more scopes if needed
-      provider.addScope('email');
-      provider.addScope('profile');
-      
-      provider.setCustomParameters({
-        prompt: "select_account",
-      });
-      
-      console.log("Starting Google sign-in redirect...");
-      await signInWithRedirect(auth, provider);
+      const result = await getRedirectResult(auth);
+
+      if (result && result.user) {
+        const idToken = await result.user.getIdToken(true);
+        const response = await fetch('/api/auth/google', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ token: idToken, email: result.user.email, uid: result.user.uid }),
+          credentials: 'include' // Important for cookie handling
+        });
+
+        if (!response.ok) {
+          throw new Error(`Backend auth failed: ${response.statusText}`);
+        }
+        
+        // Server-side redirect!
+        window.location.href = "/uncategorized";
+      }
     } catch (error) {
-      console.error("Failed to start Google sign-in:", error);
+      console.error("Google sign-in error:", error);
+      
       const errorDiv = document.createElement("div");
       errorDiv.className = "error-message";
       errorDiv.textContent = error instanceof Error
@@ -235,37 +182,20 @@ document
   });
 
   // Handle Google login
-  const googleButton = document.getElementById("google-login");
-  const provider = new GoogleAuthProvider();
   let isRedirecting = false;
 
-  googleButton?.addEventListener("click", async () => {
-    if (isRedirecting) return;
-
+  // Google Sign-In button click handler - simplified
+  document.getElementById("google-login")?.addEventListener("click", async () => {
     try {
-      console.log("Starting Google sign-in process...");
-      isRedirecting = true;
-      if (googleButton instanceof HTMLButtonElement) {
-        googleButton.disabled = true;
-        googleButton.innerHTML =
-          '<img src="/google-icon.svg" alt="Google Icon" width="18" height="18" class="google-icon" /> Signing in...';
-      }
-
-      provider.setCustomParameters({
-        prompt: "select_account",
-      });
-
-      console.log("Initiating redirect to Google...");
+      const provider = new GoogleAuthProvider();
+      provider.addScope('email');
+      provider.addScope('profile');
+      provider.setCustomParameters({ prompt: "select_account" });
       await signInWithRedirect(auth, provider);
     } catch (error) {
-      console.error("Google login error:", error);
+      console.error("Failed to start Google sign-in:", error);
       alert("Google login failed. Please try again.");
       isRedirecting = false;
-      if (googleButton instanceof HTMLButtonElement) {
-        googleButton.disabled = false;
-        googleButton.innerHTML =
-          '<img src="/google-icon.svg" alt="Google Icon" width="18" height="18" class="google-icon" /> Sign in with Google';
-      }
     }
   });
 </script>
