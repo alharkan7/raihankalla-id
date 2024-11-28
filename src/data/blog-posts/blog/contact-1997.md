@@ -79,5 +79,3 @@ Ellie Arroway : But other people need to see what I’ve seen, they need to see
 _The Being_  [](https://www.imdb.com/name/nm0001556/?ref_=tt_ch): This is the way it’s been done for billions of years. Small moves, Ellie. Small moves.
 
 —
-
-Credit Feature Image: [sebasmgsse](https://fanart.tv/members/sebasmgsse/) at fanart.tv
