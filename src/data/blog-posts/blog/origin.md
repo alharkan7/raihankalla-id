@@ -117,7 +117,7 @@ _Ambra felt a rush of excitement. The genetic code obviously carried data—spec
 
 _Ambra could feel the power in his words. “I wish everyone thought like you do,” she finally said. “It seems we do a lot of fighting over God. Everyone has a different version of the truth.”_
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 [\[1\]](#_ftnref1) Dunkirk adalah film terbaru karya Christopher Nolan, sineas di balik Memento, The Dark Knight, Inception, sampai Interstellar. Dunkirk dinobatkan sebagai film perang terbaik sepanjang masa oleh banyak kritikus, dan saya berencana membuat tulisan satu lagi tentang film ini begitu versi _home video_\-nya dirilis.
 
